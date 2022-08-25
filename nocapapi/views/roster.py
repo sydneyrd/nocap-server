@@ -46,6 +46,12 @@ class RosterView(ViewSet):
         roster = Roster.objects.get(pk=pk)
         roster.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+    def update(self, request, pk):
+        """handle put"""
+        roster = Roster.objects.get(pk=pk)
+        roster.name = request.data["name"]
+        roster.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 
 
@@ -54,4 +60,4 @@ class RosterSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Roster
-        fields = ('id', 'user' )
+        fields = ('id', 'user', 'name' )
