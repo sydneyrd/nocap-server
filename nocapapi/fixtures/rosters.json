@@ -1,0 +1,107 @@
+[
+    {
+        "model": "nocapapi.roster",
+        "pk": 2,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 6,
+        "fields": {
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 10,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 11,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 12,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 13,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 14,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 15,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 16,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 21,
+        "fields": {
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 24,
+        "fields": {
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 25,
+        "fields": {
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 26,
+        "fields": {
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 27,
+        "fields": {
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.roster",
+        "pk": 28,
+        "fields": {
+            "user": 1
+        }
+    }
+]

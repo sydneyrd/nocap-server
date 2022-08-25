@@ -1,0 +1,112 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Hi",
+            "first_name": "me",
+            "last_name": "me",
+            "email": "fake@fake.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-08-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    
+        {
+            "model": "auth.user",
+            "pk": 2,
+            "fields": {
+                "password": "pbkdf2_sha156$216000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+                "last_login": null,
+                "is_superuser": false,
+                "username": "Carrie1945",
+                "first_name": "Carrie",
+                "last_name": "Belk",
+                "email": "me@me.com",
+                "is_staff": false,
+                "is_active": true,
+                "date_joined": "2020-08-28T14:51:39.989Z",
+                "groups": [],
+                "user_permissions": []
+            }
+        },
+        
+            {
+                "model": "auth.user",
+                "pk": 8,
+                "fields": {
+                    "password": "pbkdf2_sha259$916000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+                    "last_login": null,
+                    "is_superuser": false,
+                    "username": "hello",
+                    "first_name": "Carrie",
+                    "last_name": "Belk",
+                    "email": "em@fj.com",
+                    "is_staff": false,
+                    "is_active": true,
+                    "date_joined": "2020-08-28T14:51:39.989Z",
+                    "groups": [],
+                    "user_permissions": []
+                }
+            },{
+                "model": "auth.user",
+                "pk": 10,
+                "fields": {
+                    "password": "pbkdf2_sha259$916000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+                    "last_login": null,
+                    "is_superuser": false,
+                    "username": "testing",
+                    "first_name": "Dunno",
+                    "last_name": "Boo",
+                    "email": "updatedagin@kjd.com",
+                    "is_staff": false,
+                    "is_active": true,
+                    "date_joined": "2020-08-28T14:51:39.989Z",
+                    "groups": [],
+                    "user_permissions": []
+                }
+            },
+            {
+                "model": "auth.user",
+                "pk": 11,
+                "fields": {
+                    "password": "pbkdf2_sha259$916000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+                    "last_login": null,
+                    "is_superuser": false,
+                    "username": "hiiiiii",
+                    "first_name": "Hiiii",
+                    "last_name": "hi",
+                    "email": "hi@hi.com",
+                    "is_staff": false,
+                    "is_active": true,
+                    "date_joined": "2020-08-28T14:51:39.989Z",
+                    "groups": [],
+                    "user_permissions": []
+                }
+            },{
+                "model": "auth.user",
+                "pk": 12,
+                "fields": {
+                    "password": "pbkdf2_sha259$916000$qMRH8szID7Z8$Vljya2V3XfruOHuvx1hGz9ZyKg4bxbw7rc2WO0gTR7I=",
+                    "last_login": null,
+                    "is_superuser": false,
+                    "username": "howdy",
+                    "first_name": "how",
+                    "last_name": "dee",
+                    "email": "how@dee.com",
+                    "is_staff": false,
+                    "is_active": true,
+                    "date_joined": "2020-08-28T14:51:39.989Z",
+                    "groups": [],
+                    "user_permissions": []
+                }
+            }
+        
+    
+]

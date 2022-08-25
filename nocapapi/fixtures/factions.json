@@ -1,0 +1,22 @@
+[{
+    "model": "nocapapi.faction",
+    "pk": 1,
+    "fields": {
+        "name": "Green"
+    }
+},
+{
+    "model": "nocapapi.faction",
+    "pk": 2,
+    "fields": {
+        "name": "Purple"
+    }
+},
+{
+    "model": "nocapapi.faction",
+    "pk": 3,
+    "fields": {
+        "name": "Yellow"
+    }
+}
+]

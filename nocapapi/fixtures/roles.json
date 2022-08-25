@@ -1,0 +1,44 @@
+[
+    {
+        "model": "nocapapi.role",
+        "pk": 1,
+        "fields": {
+            "name": "Healer"
+        }
+    },
+    {
+        "model": "nocapapi.role",
+        "pk": 2,
+        "fields": {
+            "name": "Melee"
+        }
+    },
+    {
+        "model": "nocapapi.role",
+        "pk": 3,
+        "fields": {
+            "name": "Dex"
+        }
+    },
+    {
+        "model": "nocapapi.role",
+        "pk": 4,
+        "fields": {
+            "name": "Mage"
+        }
+    },
+    {
+        "model": "nocapapi.role",
+        "pk": 5,
+        "fields": {
+            "name": "Tank"
+        }
+    },
+    {
+        "model": "nocapapi.role",
+        "pk": 6,
+        "fields": {
+            "name": "I can't be labeled."
+        }
+    }
+]

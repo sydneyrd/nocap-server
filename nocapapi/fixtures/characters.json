@@ -1,0 +1,1770 @@
+[
+    {
+        "model": "nocapapi.character",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "character_name": "ihaveanamenow",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 2
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "character_name": "Jahsum",
+            "role": 2,
+            "primary_weapon": 4,
+            "secondary_weapon": 3,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 4,
+        "fields": {
+            "user": 1,
+            "character_name": "The Storrm",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 5,
+            "faction": 2
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 9,
+        "fields": {
+            "user": 8,
+            "character_name": "Thiccums",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 10,
+        "fields": {
+            "user": 10,
+            "character_name": "FVCoffeeGuy",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 13,
+        "fields": {
+            "user": 8,
+            "character_name": "HeNtAiKaGe",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 15,
+        "fields": {
+            "user": 10,
+            "character_name": "Hispanic Grinch",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 20,
+        "fields": {
+            "user": 1,
+            "character_name": "Ms Honeycreeper",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 12,
+            "server": 1,
+            "faction": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 25,
+        "fields": {
+            "character_name": "anewone",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 1,
+            "faction": 1,
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 26,
+        "fields": {
+            "user": 1,
+            "character_name": "Mr Coolguy",
+            "role": 3,
+            "primary_weapon": 1,
+            "secondary_weapon": 7,
+            "server": 4,
+            "faction": 2
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 28,
+        "fields": {
+            "user": 1,
+            "character_name": "ShounenTard",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 2
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 29,
+        "fields": {
+            "user": 1,
+            "character_name": "Statpadding",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 1,
+            "faction": 2
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 30,
+        "fields": {
+            "user": 1,
+            "character_name": "BigNut679",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 31,
+        "fields": {
+            "user": 2,
+            "character_name": "Sprinles",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 32,
+        "fields": {
+            "user": 1,
+            "character_name": "LonsoGosu",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 2,
+            "faction": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 33,
+        "fields": {
+            "user": 1,
+            "character_name": "barrable",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 34,
+        "fields": {
+            "user": 1,
+            "character_name": "Occurred",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 35,
+        "fields": {
+            "user": 1,
+            "character_name": "Aela Kjorn",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 36,
+        "fields": {
+            "user": 1,
+            "character_name": "Dwight",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 37,
+        "fields": {
+            "user": 1,
+            "character_name": "Honey",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 2,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 38,
+        "fields": {
+            "user": 1,
+            "character_name": "lib",
+            "role": 6,
+            "primary_weapon": 1,
+            "secondary_weapon": 7,
+            "server": 1,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 39,
+        "fields": {
+            "user": 1,
+            "character_name": "NancyeDrew",
+            "role": 6,
+            "primary_weapon": 4,
+            "secondary_weapon": 3,
+            "server": 5,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 40,
+        "fields": {
+            "user": 2,
+            "character_name": "BrookieBear",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 2,
+            "faction": 3
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 41,
+        "fields": {
+            "character_name": "BigBooly",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 1,
+            "user": 11
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 42,
+        "fields": {
+            "character_name": "Fearrr",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 43,
+        "fields": {
+            "character_name": "Thrumplol",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 44,
+        "fields": {
+            "character_name": "kirio",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 45,
+        "fields": {
+            "character_name": "Invictus Mobb",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 46,
+        "fields": {
+            "character_name": "Oddmagic",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 47,
+        "fields": {
+            "character_name": "Doc Cinnabon",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 12,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 48,
+        "fields": {
+            "character_name": "Karakot",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 49,
+        "fields": {
+            "character_name": "Stun Tzu",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 50,
+        "fields": {
+            "character_name": "Boss Pilgrim",
+            "role": 6,
+            "primary_weapon": 6,
+            "secondary_weapon": 9,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 51,
+        "fields": {
+            "character_name": "Percaholic",
+            "role": 6,
+            "primary_weapon": 6,
+            "secondary_weapon": 9,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 52,
+        "fields": {
+            "character_name": "Leo",
+            "role": 4,
+            "primary_weapon": 11,
+            "secondary_weapon": 12,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 53,
+        "fields": {
+            "character_name": "PLUSHX",
+            "role": 4,
+            "primary_weapon": 11,
+            "secondary_weapon": 12,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 54,
+        "fields": {
+            "character_name": "Consig",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 55,
+        "fields": {
+            "character_name": "manTag0d",
+            "role": 3,
+            "primary_weapon": 1,
+            "secondary_weapon": 5,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 56,
+        "fields": {
+            "character_name": "Immerai",
+            "role": 6,
+            "primary_weapon": 6,
+            "secondary_weapon": 9,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 57,
+        "fields": {
+            "character_name": "vCheeser",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 12,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 58,
+        "fields": {
+            "character_name": "Oligarchy",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 59,
+        "fields": {
+            "character_name": "Thirty06",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 60,
+        "fields": {
+            "character_name": "iPlug",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 3,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 61,
+        "fields": {
+            "character_name": "trll",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 1,
+            "faction": 2,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 62,
+        "fields": {
+            "character_name": "frenchfries",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 2,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 63,
+        "fields": {
+            "character_name": "emo pete",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 2,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 64,
+        "fields": {
+            "character_name": "Widdu",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 2,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 65,
+        "fields": {
+            "character_name": "Allrise",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 66,
+        "fields": {
+            "character_name": "Englando",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 67,
+        "fields": {
+            "character_name": "Thavage",
+            "role": 2,
+            "primary_weapon": 5,
+            "secondary_weapon": 3,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 68,
+        "fields": {
+            "character_name": "ObesiDee",
+            "role": 6,
+            "primary_weapon": 6,
+            "secondary_weapon": 9,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 69,
+        "fields": {
+            "character_name": "j0sh",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 70,
+        "fields": {
+            "character_name": "jaybaiii",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 71,
+        "fields": {
+            "character_name": "pulgo",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 72,
+        "fields": {
+            "character_name": "10q",
+            "role": 6,
+            "primary_weapon": 6,
+            "secondary_weapon": 8,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 73,
+        "fields": {
+            "character_name": "metereo",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 74,
+        "fields": {
+            "character_name": "StiffBevin",
+            "role": 5,
+            "primary_weapon": 4,
+            "secondary_weapon": 9,
+            "server": 5,
+            "faction": 3,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 75,
+        "fields": {
+            "user": 1,
+            "character_name": "Squeebs",
+            "role": 2,
+            "primary_weapon": 4,
+            "secondary_weapon": 8,
+            "server": 1,
+            "faction": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 76,
+        "fields": {
+            "character_name": "Pioree",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 77,
+        "fields": {
+            "character_name": "Mavro",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 78,
+        "fields": {
+            "character_name": "expert",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 79,
+        "fields": {
+            "character_name": "Figgy2shoes",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 80,
+        "fields": {
+            "character_name": "Auggie69",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 81,
+        "fields": {
+            "character_name": "Blitia",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 82,
+        "fields": {
+            "user": 1,
+            "character_name": "Rivius",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 83,
+        "fields": {
+            "character_name": "Boblet",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 84,
+        "fields": {
+            "character_name": "Matre",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 85,
+        "fields": {
+            "character_name": "145Ping",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 86,
+        "fields": {
+            "character_name": "HBD Kley",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 87,
+        "fields": {
+            "character_name": "Mrs. Powerpigs",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 88,
+        "fields": {
+            "character_name": "Jonhimr",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 89,
+        "fields": {
+            "character_name": "OGUMMY",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 90,
+        "fields": {
+            "character_name": "PlayboiPendy",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 91,
+        "fields": {
+            "character_name": "AMIR BHAI",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 92,
+        "fields": {
+            "character_name": "Tot Zilla",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 93,
+        "fields": {
+            "character_name": "Thor Odinson420",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 94,
+        "fields": {
+            "character_name": "AllRise",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 95,
+        "fields": {
+            "character_name": "Framming 11",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 96,
+        "fields": {
+            "character_name": "Apexxis",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 97,
+        "fields": {
+            "character_name": "Segamelor",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 98,
+        "fields": {
+            "character_name": "Axenos",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 99,
+        "fields": {
+            "character_name": "iPlugg",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 100,
+        "fields": {
+            "character_name": "Animotix",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 101,
+        "fields": {
+            "character_name": "KidTej",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 102,
+        "fields": {
+            "character_name": "thiccemogirlshmu",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 103,
+        "fields": {
+            "character_name": "Chettt",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 104,
+        "fields": {
+            "character_name": "Invictus Dex",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 105,
+        "fields": {
+            "character_name": "Bulbdog",
+            "role": 4,
+            "primary_weapon": 11,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 106,
+        "fields": {
+            "character_name": "SkrateBanned",
+            "role": 4,
+            "primary_weapon": 11,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 107,
+        "fields": {
+            "character_name": "Rejinok",
+            "role": 4,
+            "primary_weapon": 11,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 108,
+        "fields": {
+            "character_name": "Louis Colton",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 109,
+        "fields": {
+            "character_name": "notdknight",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 110,
+        "fields": {
+            "character_name": "Crumblcookies",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 111,
+        "fields": {
+            "character_name": "Thaxii",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 112,
+        "fields": {
+            "character_name": "Hurse",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 113,
+        "fields": {
+            "character_name": "BinYi",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 114,
+        "fields": {
+            "character_name": "The Alezz",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 115,
+        "fields": {
+            "character_name": "Godsfrost",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 116,
+        "fields": {
+            "character_name": "YakkTheLegend",
+            "role": 3,
+            "primary_weapon": 13,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 117,
+        "fields": {
+            "character_name": "Airyakaa",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 118,
+        "fields": {
+            "character_name": "CLINIX",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 119,
+        "fields": {
+            "character_name": "le water",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 120,
+        "fields": {
+            "character_name": "Sweeet T",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 121,
+        "fields": {
+            "character_name": "Lostex",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 122,
+        "fields": {
+            "character_name": "huohu",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 123,
+        "fields": {
+            "character_name": "Slothrust",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 124,
+        "fields": {
+            "character_name": "Arventus Brohogo",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 125,
+        "fields": {
+            "character_name": "Thin Mints",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 126,
+        "fields": {
+            "character_name": "LilDragX",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 127,
+        "fields": {
+            "character_name": "BussinHeals",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 128,
+        "fields": {
+            "character_name": "JAZ00K",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 129,
+        "fields": {
+            "character_name": "NightEye",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 11,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 130,
+        "fields": {
+            "character_name": "Coop159",
+            "role": 4,
+            "primary_weapon": 12,
+            "secondary_weapon": 11,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 131,
+        "fields": {
+            "character_name": "Grantlmao",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 132,
+        "fields": {
+            "character_name": "Scorched-R",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 133,
+        "fields": {
+            "character_name": "Matre",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 134,
+        "fields": {
+            "character_name": "nachary",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 135,
+        "fields": {
+            "character_name": "Jaqor",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 136,
+        "fields": {
+            "character_name": "Tetty Gramz",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 137,
+        "fields": {
+            "character_name": "Jagonzar",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 138,
+        "fields": {
+            "character_name": "DP151515",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 139,
+        "fields": {
+            "character_name": "Yuuki Kano",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 140,
+        "fields": {
+            "character_name": "Vexsin Karix",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 141,
+        "fields": {
+            "character_name": "xDruzi",
+            "role": 4,
+            "primary_weapon": 10,
+            "secondary_weapon": 12,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 142,
+        "fields": {
+            "character_name": "Bunnae",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 143,
+        "fields": {
+            "character_name": "L y d i a -xx",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 144,
+        "fields": {
+            "character_name": "SilverElement1",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 5,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 145,
+        "fields": {
+            "character_name": "Kirshov",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 5,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 146,
+        "fields": {
+            "character_name": "ItsEssayEz",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 147,
+        "fields": {
+            "character_name": "Takobella",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 148,
+        "fields": {
+            "character_name": "UHMERICA",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 149,
+        "fields": {
+            "character_name": "Neathlm",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 150,
+        "fields": {
+            "character_name": "UhtredTheGodless",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 5,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 151,
+        "fields": {
+            "user": 1,
+            "character_name": "Tyler",
+            "role": 2,
+            "primary_weapon": 3,
+            "secondary_weapon": 4,
+            "server": 1,
+            "faction": 2
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 152,
+        "fields": {
+            "character_name": "Mom",
+            "role": 1,
+            "primary_weapon": 2,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 1,
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.character",
+        "pk": 153,
+        "fields": {
+            "user": 1,
+            "character_name": "imisschristina",
+            "role": 3,
+            "primary_weapon": 7,
+            "secondary_weapon": 1,
+            "server": 1,
+            "faction": 1
+        }
+    }
+]

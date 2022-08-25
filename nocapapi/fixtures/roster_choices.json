@@ -1,0 +1,1770 @@
+[
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 2,
+        "fields": {
+            "roster": 2,
+            "character": 2
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 3,
+        "fields": {
+            "roster": 2,
+            "character": 4
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 48,
+        "fields": {
+            "roster": 11,
+            "character": 10
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 49,
+        "fields": {
+            "roster": 11,
+            "character": 13
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 50,
+        "fields": {
+            "roster": 2,
+            "character": 1
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 51,
+        "fields": {
+            "roster": 16,
+            "character": 25
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 52,
+        "fields": {
+            "roster": 16,
+            "character": 10
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 54,
+        "fields": {
+            "roster": 16,
+            "character": 13
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 55,
+        "fields": {
+            "roster": 16,
+            "character": 15
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 56,
+        "fields": {
+            "roster": 16,
+            "character": 1
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 57,
+        "fields": {
+            "roster": 6,
+            "character": 30
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 58,
+        "fields": {
+            "roster": 6,
+            "character": 31
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 59,
+        "fields": {
+            "roster": 6,
+            "character": 33
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 60,
+        "fields": {
+            "roster": 6,
+            "character": 35
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 61,
+        "fields": {
+            "roster": 6,
+            "character": 25
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 63,
+        "fields": {
+            "roster": 6,
+            "character": 40
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 64,
+        "fields": {
+            "roster": 6,
+            "character": 10
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 65,
+        "fields": {
+            "roster": 6,
+            "character": 37
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 66,
+        "fields": {
+            "roster": 6,
+            "character": 36
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 68,
+        "fields": {
+            "roster": 6,
+            "character": 15
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 69,
+        "fields": {
+            "roster": 6,
+            "character": 2
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 70,
+        "fields": {
+            "roster": 6,
+            "character": 1
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 72,
+        "fields": {
+            "roster": 6,
+            "character": 9
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 73,
+        "fields": {
+            "roster": 6,
+            "character": 4
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 74,
+        "fields": {
+            "roster": 6,
+            "character": 29
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 76,
+        "fields": {
+            "roster": 6,
+            "character": 38
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 78,
+        "fields": {
+            "roster": 6,
+            "character": 32
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 79,
+        "fields": {
+            "roster": 6,
+            "character": 26
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 80,
+        "fields": {
+            "roster": 6,
+            "character": 20
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 93,
+        "fields": {
+            "roster": 21,
+            "character": 41
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 94,
+        "fields": {
+            "roster": 6,
+            "character": 74
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 95,
+        "fields": {
+            "roster": 6,
+            "character": 57
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 96,
+        "fields": {
+            "roster": 6,
+            "character": 61
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 97,
+        "fields": {
+            "roster": 6,
+            "character": 64
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 98,
+        "fields": {
+            "roster": 6,
+            "character": 43
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 99,
+        "fields": {
+            "roster": 6,
+            "character": 59
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 100,
+        "fields": {
+            "roster": 6,
+            "character": 49
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 101,
+        "fields": {
+            "roster": 6,
+            "character": 28
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 102,
+        "fields": {
+            "roster": 6,
+            "character": 71
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 103,
+        "fields": {
+            "roster": 6,
+            "character": 53
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 104,
+        "fields": {
+            "roster": 6,
+            "character": 68
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 105,
+        "fields": {
+            "roster": 6,
+            "character": 39
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 106,
+        "fields": {
+            "roster": 6,
+            "character": 55
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 107,
+        "fields": {
+            "roster": 6,
+            "character": 52
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 108,
+        "fields": {
+            "roster": 6,
+            "character": 70
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 109,
+        "fields": {
+            "roster": 6,
+            "character": 69
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 110,
+        "fields": {
+            "roster": 6,
+            "character": 60
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 111,
+        "fields": {
+            "roster": 6,
+            "character": 54
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 113,
+        "fields": {
+            "roster": 6,
+            "character": 66
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 114,
+        "fields": {
+            "roster": 6,
+            "character": 62
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 115,
+        "fields": {
+            "roster": 6,
+            "character": 65
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 116,
+        "fields": {
+            "roster": 6,
+            "character": 72
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 117,
+        "fields": {
+            "roster": 6,
+            "character": 63
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 118,
+        "fields": {
+            "roster": 6,
+            "character": 58
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 119,
+        "fields": {
+            "roster": 6,
+            "character": 46
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 120,
+        "fields": {
+            "roster": 6,
+            "character": 34
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 121,
+        "fields": {
+            "roster": 6,
+            "character": 73
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 122,
+        "fields": {
+            "roster": 6,
+            "character": 51
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 123,
+        "fields": {
+            "roster": 6,
+            "character": 53
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 126,
+        "fields": {
+            "roster": 6,
+            "character": 44
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 127,
+        "fields": {
+            "roster": 21,
+            "character": 50
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 129,
+        "fields": {
+            "roster": 21,
+            "character": 52
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 130,
+        "fields": {
+            "roster": 21,
+            "character": 72
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 131,
+        "fields": {
+            "roster": 21,
+            "character": 35
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 132,
+        "fields": {
+            "roster": 21,
+            "character": 65
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 133,
+        "fields": {
+            "roster": 21,
+            "character": 30
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 134,
+        "fields": {
+            "roster": 21,
+            "character": 25
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 135,
+        "fields": {
+            "roster": 21,
+            "character": 33
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 136,
+        "fields": {
+            "roster": 21,
+            "character": 40
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 137,
+        "fields": {
+            "roster": 21,
+            "character": 42
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 138,
+        "fields": {
+            "roster": 21,
+            "character": 54
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 139,
+        "fields": {
+            "roster": 21,
+            "character": 47
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 140,
+        "fields": {
+            "roster": 21,
+            "character": 62
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 141,
+        "fields": {
+            "roster": 21,
+            "character": 36
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 142,
+        "fields": {
+            "roster": 21,
+            "character": 63
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 143,
+        "fields": {
+            "roster": 21,
+            "character": 37
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 144,
+        "fields": {
+            "roster": 21,
+            "character": 1
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 145,
+        "fields": {
+            "roster": 21,
+            "character": 56
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 146,
+        "fields": {
+            "roster": 21,
+            "character": 45
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 147,
+        "fields": {
+            "roster": 21,
+            "character": 60
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 148,
+        "fields": {
+            "roster": 21,
+            "character": 69
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 149,
+        "fields": {
+            "roster": 21,
+            "character": 2
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 150,
+        "fields": {
+            "roster": 21,
+            "character": 70
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 151,
+        "fields": {
+            "roster": 21,
+            "character": 48
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 152,
+        "fields": {
+            "roster": 21,
+            "character": 44
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 153,
+        "fields": {
+            "roster": 21,
+            "character": 38
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 154,
+        "fields": {
+            "roster": 21,
+            "character": 55
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 155,
+        "fields": {
+            "roster": 21,
+            "character": 32
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 156,
+        "fields": {
+            "roster": 21,
+            "character": 73
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 157,
+        "fields": {
+            "roster": 21,
+            "character": 26
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 158,
+        "fields": {
+            "roster": 21,
+            "character": 20
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 159,
+        "fields": {
+            "roster": 21,
+            "character": 51
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 160,
+        "fields": {
+            "roster": 21,
+            "character": 58
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 161,
+        "fields": {
+            "roster": 21,
+            "character": 53
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 162,
+        "fields": {
+            "roster": 21,
+            "character": 71
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 163,
+        "fields": {
+            "roster": 21,
+            "character": 29
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 164,
+        "fields": {
+            "roster": 21,
+            "character": 49
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 165,
+        "fields": {
+            "roster": 21,
+            "character": 9
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 166,
+        "fields": {
+            "roster": 21,
+            "character": 4
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 167,
+        "fields": {
+            "roster": 21,
+            "character": 59
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 168,
+        "fields": {
+            "roster": 21,
+            "character": 57
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 169,
+        "fields": {
+            "roster": 21,
+            "character": 43
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 170,
+        "fields": {
+            "roster": 21,
+            "character": 66
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 171,
+        "fields": {
+            "roster": 21,
+            "character": 63
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 172,
+        "fields": {
+            "roster": 21,
+            "character": 13
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 173,
+        "fields": {
+            "roster": 21,
+            "character": 62
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 174,
+        "fields": {
+            "roster": 21,
+            "character": 10
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 175,
+        "fields": {
+            "roster": 21,
+            "character": 36
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 176,
+        "fields": {
+            "roster": 21,
+            "character": 73
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 178,
+        "fields": {
+            "roster": 24,
+            "character": 77
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 179,
+        "fields": {
+            "roster": 24,
+            "character": 79
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 180,
+        "fields": {
+            "roster": 24,
+            "character": 76
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 181,
+        "fields": {
+            "roster": 24,
+            "character": 78
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 182,
+        "fields": {
+            "roster": 24,
+            "character": 81
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 183,
+        "fields": {
+            "roster": 24,
+            "character": 80
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 184,
+        "fields": {
+            "roster": 24,
+            "character": 82
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 185,
+        "fields": {
+            "roster": 24,
+            "character": 83
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 186,
+        "fields": {
+            "roster": 24,
+            "character": 84
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 187,
+        "fields": {
+            "roster": 24,
+            "character": 85
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 188,
+        "fields": {
+            "roster": 24,
+            "character": 86
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 189,
+        "fields": {
+            "roster": 24,
+            "character": 92
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 190,
+        "fields": {
+            "roster": 24,
+            "character": 93
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 191,
+        "fields": {
+            "roster": 24,
+            "character": 94
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 192,
+        "fields": {
+            "roster": 24,
+            "character": 95
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 193,
+        "fields": {
+            "roster": 24,
+            "character": 96
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 194,
+        "fields": {
+            "roster": 24,
+            "character": 97
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 195,
+        "fields": {
+            "roster": 24,
+            "character": 98
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 196,
+        "fields": {
+            "roster": 24,
+            "character": 99
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 197,
+        "fields": {
+            "roster": 24,
+            "character": 100
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 198,
+        "fields": {
+            "roster": 24,
+            "character": 101
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 200,
+        "fields": {
+            "roster": 24,
+            "character": 103
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 201,
+        "fields": {
+            "roster": 24,
+            "character": 104
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 202,
+        "fields": {
+            "roster": 24,
+            "character": 106
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 203,
+        "fields": {
+            "roster": 24,
+            "character": 107
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 204,
+        "fields": {
+            "roster": 24,
+            "character": 108
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 205,
+        "fields": {
+            "roster": 24,
+            "character": 105
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 206,
+        "fields": {
+            "roster": 24,
+            "character": 111
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 207,
+        "fields": {
+            "roster": 24,
+            "character": 109
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 208,
+        "fields": {
+            "roster": 24,
+            "character": 110
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 209,
+        "fields": {
+            "roster": 24,
+            "character": 112
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 210,
+        "fields": {
+            "roster": 24,
+            "character": 113
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 211,
+        "fields": {
+            "roster": 24,
+            "character": 114
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 212,
+        "fields": {
+            "roster": 24,
+            "character": 115
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 213,
+        "fields": {
+            "roster": 24,
+            "character": 116
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 214,
+        "fields": {
+            "roster": 24,
+            "character": 118
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 215,
+        "fields": {
+            "roster": 24,
+            "character": 122
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 216,
+        "fields": {
+            "roster": 24,
+            "character": 123
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 217,
+        "fields": {
+            "roster": 24,
+            "character": 124
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 218,
+        "fields": {
+            "roster": 24,
+            "character": 125
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 219,
+        "fields": {
+            "roster": 24,
+            "character": 126
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 220,
+        "fields": {
+            "roster": 24,
+            "character": 127
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 222,
+        "fields": {
+            "roster": 24,
+            "character": 88
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 223,
+        "fields": {
+            "roster": 24,
+            "character": 89
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 224,
+        "fields": {
+            "roster": 24,
+            "character": 90
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 225,
+        "fields": {
+            "roster": 24,
+            "character": 87
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 226,
+        "fields": {
+            "roster": 24,
+            "character": 91
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 229,
+        "fields": {
+            "roster": 24,
+            "character": 99
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 230,
+        "fields": {
+            "roster": 24,
+            "character": 102
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 234,
+        "fields": {
+            "roster": 24,
+            "character": 117
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 235,
+        "fields": {
+            "roster": 24,
+            "character": 119
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 236,
+        "fields": {
+            "roster": 24,
+            "character": 120
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 237,
+        "fields": {
+            "roster": 24,
+            "character": 121
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 238,
+        "fields": {
+            "roster": 25,
+            "character": 128
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 239,
+        "fields": {
+            "roster": 25,
+            "character": 129
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 240,
+        "fields": {
+            "roster": 25,
+            "character": 89
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 241,
+        "fields": {
+            "roster": 25,
+            "character": 97
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 242,
+        "fields": {
+            "roster": 25,
+            "character": 104
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 243,
+        "fields": {
+            "roster": 25,
+            "character": 130
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 244,
+        "fields": {
+            "roster": 25,
+            "character": 78
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 245,
+        "fields": {
+            "roster": 25,
+            "character": 131
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 246,
+        "fields": {
+            "roster": 25,
+            "character": 132
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 247,
+        "fields": {
+            "roster": 25,
+            "character": 88
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 248,
+        "fields": {
+            "roster": 25,
+            "character": 80
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 249,
+        "fields": {
+            "roster": 25,
+            "character": 79
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 250,
+        "fields": {
+            "roster": 25,
+            "character": 96
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 251,
+        "fields": {
+            "roster": 25,
+            "character": 100
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 252,
+        "fields": {
+            "roster": 25,
+            "character": 93
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 253,
+        "fields": {
+            "roster": 25,
+            "character": 133
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 254,
+        "fields": {
+            "roster": 25,
+            "character": 134
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 255,
+        "fields": {
+            "roster": 25,
+            "character": 103
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 256,
+        "fields": {
+            "roster": 25,
+            "character": 135
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 257,
+        "fields": {
+            "roster": 25,
+            "character": 136
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 258,
+        "fields": {
+            "roster": 25,
+            "character": 102
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 259,
+        "fields": {
+            "roster": 25,
+            "character": 139
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 260,
+        "fields": {
+            "roster": 25,
+            "character": 137
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 261,
+        "fields": {
+            "roster": 25,
+            "character": 99
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 262,
+        "fields": {
+            "roster": 25,
+            "character": 92
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 263,
+        "fields": {
+            "roster": 25,
+            "character": 138
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 264,
+        "fields": {
+            "roster": 25,
+            "character": 91
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 265,
+        "fields": {
+            "roster": 25,
+            "character": 85
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 266,
+        "fields": {
+            "roster": 25,
+            "character": 149
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 267,
+        "fields": {
+            "roster": 25,
+            "character": 110
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 268,
+        "fields": {
+            "roster": 25,
+            "character": 140
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 269,
+        "fields": {
+            "roster": 25,
+            "character": 109
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 270,
+        "fields": {
+            "roster": 25,
+            "character": 108
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 271,
+        "fields": {
+            "roster": 25,
+            "character": 141
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 272,
+        "fields": {
+            "roster": 25,
+            "character": 118
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 273,
+        "fields": {
+            "roster": 25,
+            "character": 113
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 274,
+        "fields": {
+            "roster": 25,
+            "character": 106
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 275,
+        "fields": {
+            "roster": 25,
+            "character": 142
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 276,
+        "fields": {
+            "roster": 25,
+            "character": 127
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 277,
+        "fields": {
+            "roster": 25,
+            "character": 147
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 278,
+        "fields": {
+            "roster": 25,
+            "character": 148
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 279,
+        "fields": {
+            "roster": 25,
+            "character": 124
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 280,
+        "fields": {
+            "roster": 25,
+            "character": 125
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 281,
+        "fields": {
+            "roster": 25,
+            "character": 144
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 282,
+        "fields": {
+            "roster": 25,
+            "character": 145
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 283,
+        "fields": {
+            "roster": 25,
+            "character": 123
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 284,
+        "fields": {
+            "roster": 25,
+            "character": 143
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 285,
+        "fields": {
+            "roster": 25,
+            "character": 120
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 286,
+        "fields": {
+            "roster": 25,
+            "character": 146
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 287,
+        "fields": {
+            "roster": 25,
+            "character": 150
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 289,
+        "fields": {
+            "roster": 27,
+            "character": 72
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 290,
+        "fields": {
+            "roster": 27,
+            "character": 80
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 291,
+        "fields": {
+            "roster": 27,
+            "character": 96
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 292,
+        "fields": {
+            "roster": 27,
+            "character": 33
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 294,
+        "fields": {
+            "roster": 27,
+            "character": 85
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 295,
+        "fields": {
+            "roster": 27,
+            "character": 35
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 297,
+        "fields": {
+            "roster": 27,
+            "character": 85
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 298,
+        "fields": {
+            "roster": 27,
+            "character": 35
+        }
+    },
+    {
+        "model": "nocapapi.rosterchoices",
+        "pk": 299,
+        "fields": {
+            "roster": 27,
+            "character": 25
+        }
+    }
+]

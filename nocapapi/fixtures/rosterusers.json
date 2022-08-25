@@ -1,0 +1,42 @@
+[
+    {
+        "model": "nocapapi.rosteruser",
+        "pk": 1,
+        "fields": {
+            "user": 1
+        }
+    },
+    {
+        "model": "nocapapi.rosteruser",
+        "pk": 2,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "nocapapi.rosteruser",
+        "pk": 8,
+        "fields": {
+            "user": 8
+        }
+    },
+    {
+        "model": "nocapapi.rosteruser",
+        "pk": 10,
+        "fields": {
+            "user": 10
+        }
+    },
+    {
+        "model": "nocapapi.rosteruser",
+        "pk": 11,
+        "fields": {
+            "user": 11
+        }
+    }, {
+        "model": "nocapapi.rosteruser",
+        "pk": 12,
+        "fields": {
+            "user": 12
+        }}
+]

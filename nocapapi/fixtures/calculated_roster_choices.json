@@ -1,0 +1,1322 @@
+[
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 57,
+        "fields": {
+            "character": 76,
+            "damage": 2189444,
+            "healing": 0,
+            "kills": 8,
+            "deaths": 6,
+            "assists": 155,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 58,
+        "fields": {
+            "character": 107,
+            "damage": 959711,
+            "healing": 0,
+            "kills": 22,
+            "deaths": 11,
+            "assists": 104,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 59,
+        "fields": {
+            "character": 108,
+            "damage": 198490,
+            "healing": 1603359,
+            "kills": 5,
+            "deaths": 8,
+            "assists": 67,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 60,
+        "fields": {
+            "character": 109,
+            "damage": 968313,
+            "healing": 0,
+            "kills": 15,
+            "deaths": 15,
+            "assists": 83,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 61,
+        "fields": {
+            "character": 110,
+            "damage": 967883,
+            "healing": 0,
+            "kills": 8,
+            "deaths": 14,
+            "assists": 97,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 62,
+        "fields": {
+            "character": 111,
+            "damage": 908698,
+            "healing": 0,
+            "kills": 8,
+            "deaths": 16,
+            "assists": 83,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 63,
+        "fields": {
+            "character": 77,
+            "damage": 465710,
+            "healing": 3033810,
+            "kills": 4,
+            "deaths": 8,
+            "assists": 81,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 64,
+        "fields": {
+            "character": 112,
+            "damage": 896210,
+            "healing": 0,
+            "kills": 9,
+            "deaths": 20,
+            "assists": 49,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 65,
+        "fields": {
+            "character": 113,
+            "damage": 868069,
+            "healing": 0,
+            "kills": 7,
+            "deaths": 16,
+            "assists": 77,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 66,
+        "fields": {
+            "character": 115,
+            "damage": 907392,
+            "healing": 0,
+            "kills": 17,
+            "deaths": 19,
+            "assists": 38,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 67,
+        "fields": {
+            "character": 116,
+            "damage": 830617,
+            "healing": 0,
+            "kills": 8,
+            "deaths": 22,
+            "assists": 80,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 68,
+        "fields": {
+            "character": 78,
+            "damage": 1890785,
+            "healing": 0,
+            "kills": 13,
+            "deaths": 9,
+            "assists": 127,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 69,
+        "fields": {
+            "character": 117,
+            "damage": 198581,
+            "healing": 1264605,
+            "kills": 3,
+            "deaths": 10,
+            "assists": 61,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 70,
+        "fields": {
+            "character": 118,
+            "damage": 825596,
+            "healing": 0,
+            "kills": 7,
+            "deaths": 18,
+            "assists": 81,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 71,
+        "fields": {
+            "character": 119,
+            "damage": 693986,
+            "healing": 0,
+            "kills": 8,
+            "deaths": 19,
+            "assists": 79,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 72,
+        "fields": {
+            "character": 120,
+            "damage": 147278,
+            "healing": 895901,
+            "kills": 2,
+            "deaths": 14,
+            "assists": 34,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 73,
+        "fields": {
+            "character": 121,
+            "damage": 472053,
+            "healing": 4512,
+            "kills": 2,
+            "deaths": 9,
+            "assists": 124,
+            "calculated_roster": 4
+        }
+    },
+    { "model": "nocapapi.calculatedrosterchoices",
+    "pk": 74,
+    "fields": {
+        "character": 79,
+        "damage": 1854987,
+        "healing": 0,
+        "kills": 11,
+        "deaths": 3,
+        "assists": 89,
+        "calculated_roster": 4}
+    },
+    { "model": "nocapapi.calculatedrosterchoices",
+    "pk": 75,
+    "fields": {
+        "character": 122,
+        "damage": 410333,
+        "healing": 0,
+        "kills": 6,
+        "deaths": 20,
+        "assists": 24,
+        "calculated_roster": 4}
+    },
+    {"model": "nocapapi.calculatedrosterchoices",
+    "pk": 76,
+    "fields": {
+        "character": 123,
+        "damage": 355428,
+        "healing": 0,
+        "kills": 6,
+        "deaths": 10,
+        "assists": 17,
+        "calculated_roster": 4}
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 77,
+        "fields": {
+            "character": 124,
+            "damage": 397305,
+            "healing": 2577,
+            "kills": 1,
+            "deaths": 5,
+            "assists": 138,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 78,
+        "fields": {
+            "character": 125,
+            "damage": 141066,
+            "healing": 0,
+            "kills": 2,
+            "deaths": 12,
+            "assists": 116,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 79,
+        "fields": {
+            "character": 80,
+            "damage": 1748620,
+            "healing": 0,
+            "kills": 7,
+            "deaths": 4,
+            "assists": 90,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 80,
+        "fields": {
+            "character": 126,
+            "damage": 30131,
+            "healing": 179808,
+            "kills": 0,
+            "deaths": 1,
+            "assists": 4,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 81,
+        "fields": {
+            "character": 127,
+            "damage": 4843,
+            "healing": 82966,
+            "kills": 0,
+            "deaths": 0,
+            "assists": 2,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 82,
+        "fields": {
+            "character": 97,
+            "damage": 197765,
+            "healing": 2004890,
+            "kills": 4,
+            "deaths": 10,
+            "assists": 61,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 83,
+        "fields": {
+            "character": 96,
+            "damage": 1204663,
+            "healing": 0,
+            "kills": 4,
+            "deaths": 16,
+            "assists": 79,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 84,
+        "fields": {
+            "character": 98,
+            "damage": 277838,
+            "healing": 1750385,
+            "kills": 5,
+            "deaths": 12,
+            "assists": 88,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 85,
+        "fields": {
+            "character": 81,
+            "damage": 393860,
+            "healing": 2286407,
+            "kills": 1,
+            "deaths": 5,
+            "assists": 105,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 86,
+        "fields": {
+            "character": 99,
+            "damage": 156086,
+            "healing": 1965754,
+            "kills": 0,
+            "deaths": 9,
+            "assists": 53,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 87,
+        "fields": {
+            "character": 114,
+            "damage": 868069,
+            "healing": 5610,
+            "kills": 6,
+            "deaths": 14,
+            "assists": 79,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 88,
+        "fields": {
+            "character": 82,
+            "damage": 1629061,
+            "healing": 0,
+            "kills": 13,
+            "deaths": 3,
+            "assists": 86,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 89,
+        "fields": {
+            "character": 83,
+            "damage": 1495230,
+            "healing": 0,
+            "kills": 21,
+            "deaths": 7,
+            "assists": 69,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 90,
+        "fields": {
+            "character": 84,
+            "damage": 1418989,
+            "healing": 7073,
+            "kills": 4,
+            "deaths": 12,
+            "assists": 136,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 91,
+        "fields": {
+            "character": 85,
+            "damage": 1406752,
+            "healing": 0,
+            "kills": 7,
+            "deaths": 6,
+            "assists": 121,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 92,
+        "fields": {
+            "character": 86,
+            "damage": 441006,
+            "healing": 1931848,
+            "kills": 1,
+            "deaths": 6,
+            "assists": 63,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 93,
+        "fields": {
+            "character": 87,
+            "damage": 1324582,
+            "healing": 11113,
+            "kills": 10,
+            "deaths": 4,
+            "assists": 131,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 94,
+        "fields": {
+            "character": 88,
+            "damage": 1339718,
+            "healing": 8377,
+            "kills": 4,
+            "deaths": 12,
+            "assists": 117,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 95,
+        "fields": {
+            "character": 89,
+            "damage": 1301441,
+            "healing": 12515,
+            "kills": 6,
+            "deaths": 9,
+            "assists": 141,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 96,
+        "fields": {
+            "character": 90,
+            "damage": 350909,
+            "healing": 1917539,
+            "kills": 2,
+            "deaths": 5,
+            "assists": 83,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 97,
+        "fields": {
+            "character": 91,
+            "damage": 1252388,
+            "healing": 0,
+            "kills": 13,
+            "deaths": 10,
+            "assists": 126,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 99,
+        "fields": {
+            "character": 93,
+            "damage": 1201197,
+            "healing": 54896,
+            "kills": 6,
+            "deaths": 11,
+            "assists": 139,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 100,
+        "fields": {
+            "character": 94,
+            "damage": 261541,
+            "healing": 2031622,
+            "kills": 1,
+            "deaths": 10,
+            "assists": 42,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 101,
+        "fields": {
+            "character": 95,
+            "damage": 1166094,
+            "healing": 0,
+            "kills": 17,
+            "deaths": 13,
+            "assists": 121,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 102,
+        "fields": {
+            "character": 103,
+            "damage": 1149204,
+            "healing": 0,
+            "kills": 14,
+            "deaths": 14,
+            "assists": 100,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 103,
+        "fields": {
+            "character": 100,
+            "damage": 1058175,
+            "healing": 0,
+            "kills": 20,
+            "deaths": 11,
+            "assists": 89,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 105,
+        "fields": {
+            "character": 102,
+            "damage": 1048616,
+            "healing": 0,
+            "kills": 10,
+            "deaths": 12,
+            "assists": 125,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 107,
+        "fields": {
+            "character": 105,
+            "damage": 1046244,
+            "healing": 10659,
+            "kills": 5,
+            "deaths": 12,
+            "assists": 132,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 108,
+        "fields": {
+            "character": 106,
+            "damage": 1003562,
+            "healing": 0,
+            "kills": 19,
+            "deaths": 15,
+            "assists": 105,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 112,
+        "fields": {
+            "character": 104,
+            "damage": 1065589,
+            "healing": 0,
+            "kills": 12,
+            "deaths": 19,
+            "assists": 78,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 114,
+        "fields": {
+            "character": 101,
+            "damage": 1071087,
+            "healing": 0,
+            "kills": 5,
+            "deaths": 9,
+            "assists": 137,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 115,
+        "fields": {
+            "character": 92,
+            "damage": 1247416,
+            "healing": 13896,
+            "kills": 6,
+            "deaths": 11,
+            "assists": 121,
+            "calculated_roster": 4
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 116,
+        "fields": {
+            "character": 129,
+            "damage": 1584129,
+            "healing": 0,
+            "kills": 25,
+            "deaths": 2,
+            "assists": 248,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 117,
+        "fields": {
+            "character": 89,
+            "damage": 1475199,
+            "healing": 0,
+            "kills": 21,
+            "deaths": 3,
+            "assists": 299,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 118,
+        "fields": {
+            "character": 104,
+            "damage": 1489338,
+            "healing": 0,
+            "kills": 53,
+            "deaths": 4,
+            "assists": 222,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 119,
+        "fields": {
+            "character": 130,
+            "damage": 1383228,
+            "healing": 2100,
+            "kills": 34,
+            "deaths": 2,
+            "assists": 338,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 120,
+        "fields": {
+            "character": 150,
+            "damage": 1294856,
+            "healing": 0,
+            "kills": 39,
+            "deaths": 4,
+            "assists": 250,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 121,
+        "fields": {
+            "character": 97,
+            "damage": 230799,
+            "healing": 2170114,
+            "kills": 12,
+            "deaths": 0,
+            "assists": 189,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 122,
+        "fields": {
+            "character": 78,
+            "damage": 1246606,
+            "healing": 0,
+            "kills": 19,
+            "deaths": 2,
+            "assists": 247,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 123,
+        "fields": {
+            "character": 131,
+            "damage": 1140045,
+            "healing": 0,
+            "kills": 35,
+            "deaths": 6,
+            "assists": 288,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 124,
+        "fields": {
+            "character": 88,
+            "damage": 1177848,
+            "healing": 5372,
+            "kills": 9,
+            "deaths": 1,
+            "assists": 329,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 125,
+        "fields": {
+            "character": 132,
+            "damage": 1123592,
+            "healing": 0,
+            "kills": 37,
+            "deaths": 5,
+            "assists": 256,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 126,
+        "fields": {
+            "character": 80,
+            "damage": 1205849,
+            "healing": 0,
+            "kills": 24,
+            "deaths": 0,
+            "assists": 135,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 127,
+        "fields": {
+            "character": 96,
+            "damage": 1081418,
+            "healing": 0,
+            "kills": 41,
+            "deaths": 4,
+            "assists": 298,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 128,
+        "fields": {
+            "character": 79,
+            "damage": 1190449,
+            "healing": 0,
+            "kills": 29,
+            "deaths": 1,
+            "assists": 132,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 129,
+        "fields": {
+            "character": 100,
+            "damage": 1049501,
+            "healing": 0,
+            "kills": 30,
+            "deaths": 1,
+            "assists": 318,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 130,
+        "fields": {
+            "character": 91,
+            "damage": 1101148,
+            "healing": 0,
+            "kills": 22,
+            "deaths": 3,
+            "assists": 331,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 131,
+        "fields": {
+            "character": 93,
+            "damage": 1001224,
+            "healing": 60161,
+            "kills": 13,
+            "deaths": 3,
+            "assists": 398,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 132,
+        "fields": {
+            "character": 133,
+            "damage": 1074316,
+            "healing": 0,
+            "kills": 14,
+            "deaths": 5,
+            "assists": 285,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 133,
+        "fields": {
+            "character": 134,
+            "damage": 201079,
+            "healing": 1835736,
+            "kills": 13,
+            "deaths": 1,
+            "assists": 140,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 134,
+        "fields": {
+            "character": 103,
+            "damage": 954318,
+            "healing": 0,
+            "kills": 28,
+            "deaths": 5,
+            "assists": 270,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 135,
+        "fields": {
+            "character": 135,
+            "damage": 944997,
+            "healing": 0,
+            "kills": 46,
+            "deaths": 5,
+            "assists": 199,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 136,
+        "fields": {
+            "character": 85,
+            "damage": 999309,
+            "healing": 0,
+            "kills": 14,
+            "deaths": 0,
+            "assists": 254,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 137,
+        "fields": {
+            "character": 136,
+            "damage": 991357,
+            "healing": 0,
+            "kills": 44,
+            "deaths": 9,
+            "assists": 58,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 138,
+        "fields": {
+            "character": 137,
+            "damage": 944136,
+            "healing": 0,
+            "kills": 25,
+            "deaths": 1,
+            "assists": 232,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 139,
+        "fields": {
+            "character": 99,
+            "damage": 86326,
+            "healing": 1841206,
+            "kills": 4,
+            "deaths": 4,
+            "assists": 167,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 140,
+        "fields": {
+            "character": 138,
+            "damage": 853755,
+            "healing": 0,
+            "kills": 22,
+            "deaths": 3,
+            "assists": 281,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 141,
+        "fields": {
+            "character": 102,
+            "damage": 828619,
+            "healing": 0,
+            "kills": 30,
+            "deaths": 3,
+            "assists": 271,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 142,
+        "fields": {
+            "character": 139,
+            "damage": 868580,
+            "healing": 12643,
+            "kills": 14,
+            "deaths": 6,
+            "assists": 246,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 143,
+        "fields": {
+            "character": 92,
+            "damage": 887567,
+            "healing": 4236,
+            "kills": 13,
+            "deaths": 4,
+            "assists": 312,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 144,
+        "fields": {
+            "character": 149,
+            "damage": 117867,
+            "healing": 1678338,
+            "kills": 5,
+            "deaths": 1,
+            "assists": 114,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 147,
+        "fields": {
+            "character": 140,
+            "damage": 214703,
+            "healing": 1358761,
+            "kills": 13,
+            "deaths": 2,
+            "assists": 139,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 148,
+        "fields": {
+            "character": 108,
+            "damage": 227073,
+            "healing": 1242369,
+            "kills": 9,
+            "deaths": 1,
+            "assists": 142,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 149,
+        "fields": {
+            "character": 141,
+            "damage": 711335,
+            "healing": 12139,
+            "kills": 14,
+            "deaths": 1,
+            "assists": 349,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 150,
+        "fields": {
+            "character": 118,
+            "damage": 772646,
+            "healing": 0,
+            "kills": 18,
+            "deaths": 5,
+            "assists": 214,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 155,
+        "fields": {
+            "character": 123,
+            "damage": 629308,
+            "healing": 0,
+            "kills": 19,
+            "deaths": 8,
+            "assists": 165,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 156,
+        "fields": {
+            "character": 143,
+            "damage": 99776,
+            "healing": 1035406,
+            "kills": 7,
+            "deaths": 0,
+            "assists": 121,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 159,
+        "fields": {
+            "character": 145,
+            "damage": 479349,
+            "healing": 0,
+            "kills": 16,
+            "deaths": 9,
+            "assists": 135,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 160,
+        "fields": {
+            "character": 146,
+            "damage": 413487,
+            "healing": 0,
+            "kills": 16,
+            "deaths": 3,
+            "assists": 203,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 161,
+        "fields": {
+            "character": 147,
+            "damage": 48782,
+            "healing": 793549,
+            "kills": 3,
+            "deaths": 4,
+            "assists": 111,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 162,
+        "fields": {
+            "character": 148,
+            "damage": 301235,
+            "healing": 0,
+            "kills": 10,
+            "deaths": 8,
+            "assists": 42,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 164,
+        "fields": {
+            "character": 109,
+            "damage": 822820,
+            "healing": 0,
+            "kills": 24,
+            "deaths": 5,
+            "assists": 240,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 165,
+        "fields": {
+            "character": 113,
+            "damage": 788622,
+            "healing": 0,
+            "kills": 17,
+            "deaths": 5,
+            "assists": 179,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 166,
+        "fields": {
+            "character": 127,
+            "damage": 93797,
+            "healing": 1390167,
+            "kills": 4,
+            "deaths": 5,
+            "assists": 122,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 168,
+        "fields": {
+            "character": 142,
+            "damage": 160056,
+            "healing": 1075489,
+            "kills": 8,
+            "deaths": 4,
+            "assists": 120,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 169,
+        "fields": {
+            "character": 120,
+            "damage": 109249,
+            "healing": 880015,
+            "kills": 3,
+            "deaths": 4,
+            "assists": 129,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 170,
+        "fields": {
+            "character": 144,
+            "damage": 510990,
+            "healing": 0,
+            "kills": 15,
+            "deaths": 4,
+            "assists": 103,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 171,
+        "fields": {
+            "character": 124,
+            "damage": 259660,
+            "healing": 0,
+            "kills": 6,
+            "deaths": 0,
+            "assists": 108,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 172,
+        "fields": {
+            "character": 125,
+            "damage": 124541,
+            "healing": 0,
+            "kills": 9,
+            "deaths": 2,
+            "assists": 235,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 173,
+        "fields": {
+            "character": 110,
+            "damage": 825101,
+            "healing": 0,
+            "kills": 21,
+            "deaths": 4,
+            "assists": 287,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 174,
+        "fields": {
+            "character": 128,
+            "damage": 1713102,
+            "healing": 0,
+            "kills": 31,
+            "deaths": 1,
+            "assists": 341,
+            "calculated_roster": 5
+        }
+    },
+    {
+        "model": "nocapapi.calculatedrosterchoices",
+        "pk": 176,
+        "fields": {
+            "character": 106,
+            "damage": 741144,
+            "healing": 0,
+            "kills": 21,
+            "deaths": 6,
+            "assists": 212,
+            "calculated_roster": 5
+        }
+    }
+]

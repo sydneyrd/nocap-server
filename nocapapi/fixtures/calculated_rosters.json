@@ -1,0 +1,20 @@
+[
+    {
+        "model": "nocapapi.calculatedroster",
+        "pk": 4,
+        "fields": {
+            "roster": 24,
+            "user": 1,
+            "rosterName": "Not YUH Swamp vs Caspari Circle (L)"
+        }
+    },
+    {
+        "model": "nocapapi.calculatedroster",
+        "pk": 5,
+        "fields": {
+            "roster": 25,
+            "user": 1,
+            "rosterName": "Not YUH Swamp VS Warslots for Sale (W)"
+        }
+    }
+]
