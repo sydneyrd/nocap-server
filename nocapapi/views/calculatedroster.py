@@ -35,8 +35,10 @@ class CalculatedRosterView(ViewSet):
     def create(self, request):
         """Handle POST operations"""
         user = RosterUser.objects.get(user_id=request.auth.user)
-        roster = Roster.objects.get(pk=request.data['roster'])
-        
+        if request.data['roster'] is not None:
+            roster = Roster.objects.get(pk=request.data['roster'])
+        else:
+            roster = None
         newroster = CalculatedRoster.objects.create(
             user=user,
             rosterName=request.data['rosterName'],
@@ -44,7 +46,7 @@ class CalculatedRosterView(ViewSet):
 
         )
         serializer = CalculatedRosterSerializer(newroster)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def destroy(self, request, pk):
         calculatedroster = CalculatedRoster.objects.get(pk=pk)
