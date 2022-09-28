@@ -77,6 +77,6 @@ class CharacterSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Character
-        fields = ('id', 'role', 'faction', 'primary_weapon', 'secondary_weapon', 'server',  'character_name', 'user' )
+        fields = ('id', 'role', 'faction', 'primary_weapon', 'secondary_weapon', 'server',  'character_name', 'user', 'notes' )
         
         
