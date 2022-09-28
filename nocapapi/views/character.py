@@ -10,9 +10,9 @@ class CharacterView(ViewSet):
     """Level up game types view"""
 
     def retrieve(self, request, pk):
-        """Handle GET requests for single game type
+        """Handle GET requests for single character
         Returns:
-            Response -- JSON serialized game type"""
+            Response -- JSON serialized character"""
         try:
             character = Character.objects.get(pk=pk)
             serializer = CharacterSerializer(character)
@@ -22,9 +22,9 @@ class CharacterView(ViewSet):
         
 
     def list(self, request):
-        """Handle GET requests to get all game types
+        """Handle GET requests to get all characters
         Returns:
-            Response -- JSON serialized list of game types
+            Response -- JSON serialized list of characters
         """
         characters = Character.objects.all()
         user_char = request.query_params.get('user', None)
@@ -78,4 +78,5 @@ class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
         fields = ('id', 'role', 'faction', 'primary_weapon', 'secondary_weapon', 'server',  'character_name', 'user' )
+        
         
