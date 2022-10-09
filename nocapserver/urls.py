@@ -20,7 +20,7 @@ router.register(r'calculatedrosterchoices',
 router.register(r'rosterchoices', RosterChoicesView, 'rosterchoice')
 router.register(r'rosterusers', RosterUserView, 'rosteruser')
 router.register(r'users', UserView, 'user')
-router.register(r'links', CharLinkView, 'link')
+router.register(r'links', CharLinkView, 'links')
 
 
 urlpatterns = [

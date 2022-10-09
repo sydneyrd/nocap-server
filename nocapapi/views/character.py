@@ -62,6 +62,7 @@ class CharacterView(ViewSet):
         character.secondary_weapon = Weapon.objects.get(pk=request.data["secondary_weapon"])
         character.server = Server.objects.get(pk=request.data["server"])
         character.character_name = request.data["character_name"]
+        character.notes = request.data['notes']
         character.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
