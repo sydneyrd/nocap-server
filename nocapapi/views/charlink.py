@@ -43,24 +43,19 @@ class CharLinkView(ViewSet):
 
     def create(self, request):
         """Handle POST operations"""
-        # roster =
-        
         character = Character.objects.get(pk=request.data['character'])
-        if CalculatedRoster.objects.get(pk=request.data['roster']):
-            new_link = CharLink.objects.create(
+        if request.data['roster'] is not None:
+                new_link = CharLink.objects.create(
+                    character=character,
+                    link=request.data['link'],
+                    calculated_roster=CalculatedRoster.objects.get(pk=request.data['roster'])
+                )
+        else: new_link = CharLink.objects.create(
                 character=character,
                 link=request.data['link'],
-                roster=CalculatedRoster.objects.get(pk=request.data['roster'])
                 )
-            serializer = CharLinkSerializer(new_link)
-            return Response(serializer.data)
-        else: 
-            new_link = CharLink.objects.create(
-            character=character,
-            link=request.data['link']
-            )
-            serializer = CharLinkSerializer(new_link)
-            return Response(serializer.data)
+        serializer = CharLinkSerializer(new_link)
+        return Response(serializer.data)
 
 
 class CharLinkSerializer(serializers.ModelSerializer):
@@ -68,4 +63,4 @@ class CharLinkSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = CharLink
-        fields = ('id', 'character', 'roster', 'link')
+        fields = ('id', 'character', 'calculated_roster', 'link')
