@@ -22,29 +22,25 @@ class CharLinkView(ViewSet):
     #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
  
-    def list(self, request, pk):
-        """Handle GET requests to get all game types
+    def list(self, request):
+        """Handle GET requests to get all char_links
         Returns:
-            Response -- JSON serialized list of game types
+            Response -- JSON serialized list of char_links
         """
         char_links = CharLink.objects.all()
-        char_links = request.query_params.get('links', None)
-        if char_links is not None:
-            char_links = CharLink.filter(character_id=char_links)
-        serializer = CharLink(char_links, many=True)
+        character = request.query_params.get('character', None)
+        if character is not None:
+            char_links = char_links.filter(character=character)
+        serializer = CharLinkSerializer(char_links, many=True)
         return Response(serializer.data)
-
         # char_link = CharLink.objects.get(pk=pk)
         # serializer = CharLinkSerializer(char_link, many=True)
         # return Response(serializer.data)
 
-
-
-
     def create(self, request):
         """Handle POST operations"""
         character = Character.objects.get(pk=request.data['character'])
-        if request.data['roster'] is not None:
+        if request.data['roster'] > 0:
                 new_link = CharLink.objects.create(
                     character=character,
                     link=request.data['link'],
@@ -56,7 +52,6 @@ class CharLinkView(ViewSet):
                 )
         serializer = CharLinkSerializer(new_link)
         return Response(serializer.data)
-
 
 class CharLinkSerializer(serializers.ModelSerializer):
     """JSON serializer for game types
