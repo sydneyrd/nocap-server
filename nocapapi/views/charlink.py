@@ -53,6 +53,12 @@ class CharLinkView(ViewSet):
         serializer = CharLinkSerializer(new_link)
         return Response(serializer.data)
 
+    def destroy(self, request, pk):
+        link = CharLink.objects.get(pk=pk)
+        link.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+
 class CharLinkSerializer(serializers.ModelSerializer):
     """JSON serializer for game types
     """
