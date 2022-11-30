@@ -9,3 +9,4 @@ class CalculatedRosterChoices(models.Model):
     kills = models.IntegerField()
     deaths = models.IntegerField()
     assists = models.IntegerField()
+    group = models.IntegerField(null=True)

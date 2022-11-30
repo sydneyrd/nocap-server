@@ -37,18 +37,31 @@ class CalculatedRosterChoicesView(ViewSet):
         """Handle POST operations"""
         calculatedroster = CalculatedRoster.objects.get(pk=request.data['calculated_roster'])
         character = Character.objects.get(pk=request.data['character'])
-        newrosterchoice = CalculatedRosterChoices.objects.create(
-            calculated_roster=calculatedroster,
-            character=character,
-            damage=request.data['damage'],
-            healing=request.data['healing'],
-            kills=request.data['kills'],
-            deaths=request.data['deaths'],
-            assists=request.data['assists']
+
+        if request.data['group'] != 0:
+            newrosterchoice = CalculatedRosterChoices.objects.create(
+                calculated_roster=calculatedroster,
+                character=character,
+                damage=request.data['damage'],
+                healing=request.data['healing'],
+                kills=request.data['kills'],
+                deaths=request.data['deaths'],
+                assists=request.data['assists'],
+                group=request.data['group']
         )
+        else:
+            newrosterchoice=CalculatedRosterChoices.objects.create(
+                    calculated_roster=calculatedroster,
+                    character=character,
+                    damage=request.data['damage'],
+                    healing=request.data['healing'],
+                    kills=request.data['kills'],
+                    deaths=request.data['deaths'],
+                    assists=request.data['assists']
+            )
+
         serializer = CalcRostChoicesSerializer(newrosterchoice)
         return Response(serializer.data)
-
 
 
 class CalcRostChoicesSerializer(serializers.ModelSerializer):
@@ -56,4 +69,4 @@ class CalcRostChoicesSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = CalculatedRosterChoices
-        fields = ('id', 'character', 'calculated_roster', 'damage', 'healing', 'kills', 'deaths', 'assists' )
+        fields = ('id', 'character', 'calculated_roster', 'damage', 'healing', 'kills', 'deaths', 'assists', 'group' )
