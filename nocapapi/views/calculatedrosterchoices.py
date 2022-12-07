@@ -70,3 +70,4 @@ class CalcRostChoicesSerializer(serializers.ModelSerializer):
     class Meta:
         model = CalculatedRosterChoices
         fields = ('id', 'character', 'calculated_roster', 'damage', 'healing', 'kills', 'deaths', 'assists', 'group' )
+        depth = 1
