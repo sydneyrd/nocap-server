@@ -10,3 +10,16 @@ class CalculatedRosterChoices(models.Model):
     deaths = models.IntegerField()
     assists = models.IntegerField()
     group = models.IntegerField(null=True)
+
+    @property
+    def total_damage(self):
+        return self.__total_damage
+    @property
+    def total_healing(self):
+        return self.__total_healing
+    @property
+    def total_kills(self):
+        return self.__total_kills
+    @property
+    def total_deaths(self):
+        return self.__total_deaths

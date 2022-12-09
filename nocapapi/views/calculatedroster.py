@@ -2,7 +2,8 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from nocapapi.models import CalculatedRoster, RosterUser, Roster
+from nocapapi.models import CalculatedRoster, RosterUser, Roster, CalculatedRosterChoices
+
 
 
 
@@ -10,9 +11,9 @@ class CalculatedRosterView(ViewSet):
     """Level up game types view"""
 
     def retrieve(self, request, pk):
-        """Handle GET requests for single game type
+        """Handle GET requests for single war result roster type
         Returns:
-            Response -- JSON serialized game type"""
+            Response -- JSON serialized roster results"""
         try:
             calroster = CalculatedRoster.objects.get(pk=pk)
             serializer = CalculatedRosterSerializer(calroster)
@@ -55,8 +56,8 @@ class CalculatedRosterView(ViewSet):
 
 
 class CalculatedRosterSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
-    """
+
+
     class Meta:
         model = CalculatedRoster
-        fields = ('id', 'user', 'rosterName', 'roster'  )
+        fields = ('id', 'user', 'rosterName', 'roster')
