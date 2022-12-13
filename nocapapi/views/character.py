@@ -4,6 +4,9 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import Character
 from nocapapi.models import RosterUser, Weapon, Role, Faction, Server
+import uuid
+import base64
+from django.core.files.base import ContentFile
 
 
 class CharacterView(ViewSet):
@@ -41,6 +44,9 @@ class CharacterView(ViewSet):
         newsecondary_weapon = Weapon.objects.get(pk=request.data['secondary_weapon'])
         newserver = Server.objects.get(pk=request.data['server'])
         newfaction = Faction.objects.get(pk=request.data['faction'])
+        format, imgstr = request.data["image"].split(';base64,')
+        ext = format.split('/')[-1]
+        data = ContentFile(base64.b64decode(imgstr), name=f'{request.data["character_name"]}-{uuid.uuid4()}.{ext}')
         character = Character.objects.create(
             role=newrole,
             faction=newfaction,
@@ -48,7 +54,8 @@ class CharacterView(ViewSet):
             secondary_weapon=newsecondary_weapon,
             server=newserver,
             character_name=request.data["character_name"],
-            user=user
+            user=user,
+            image=data
         )
         serializer = CharacterSerializer(character)
         return Response(serializer.data)
@@ -63,6 +70,11 @@ class CharacterView(ViewSet):
         character.server = Server.objects.get(pk=request.data["server"])
         character.character_name = request.data["character_name"]
         character.notes = request.data['notes']
+        format, imgstr = request.data["image"].split(';base64,')
+        ext = format.split('/')[-1]
+        data = ContentFile(base64.b64decode(imgstr), name=f'{request.data["character_name"]}-{uuid.uuid4()}.{ext}')
+        character.image=data
+
         character.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
@@ -78,6 +90,6 @@ class CharacterSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Character
-        fields = ('id', 'role', 'faction', 'primary_weapon', 'secondary_weapon', 'server',  'character_name', 'user', 'notes' )
+        fields = ('id', 'role', 'faction', 'primary_weapon', 'secondary_weapon', 'server',  'character_name', 'user', 'notes', 'image' )
         
         

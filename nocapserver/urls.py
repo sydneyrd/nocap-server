@@ -4,8 +4,9 @@ from django.conf.urls import include
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from rest_framework import routers
+from django.conf.urls.static import static
 from nocapapi.views import CharacterView, register_user, login_user, CharLinkView, FactionView, ServerView, WeaponView, RoleView, RosterView, UserView, CalculatedRosterView, CalculatedRosterChoicesView, RosterChoicesView, RosterUserView
-
+from django.conf import settings
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'characters', CharacterView, 'character')
@@ -36,4 +37,4 @@ urlpatterns = [
         template_name="password_reset_form.html"), name='password_reset_confirm'),
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(
         template_name="password_reset_done.html"), name='password_reset_done')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
