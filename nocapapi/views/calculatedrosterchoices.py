@@ -31,11 +31,11 @@ class CalculatedRosterChoicesView(ViewSet):
         calcroster = request.query_params.get('calculatedroster', None)
         if calcroster is not None:
             calcrostchoices = calcrostchoices.filter(calculated_roster=calcroster)
-            calcrostchoices.annotate(
+            test_response = calcrostchoices.aggregate(
                 total_damage=Sum('damage'), total_healing=Sum('healing'),
                 total_kills=Sum('kills'),total_deaths=Sum('deaths'))
                 
-        serializer = CalcRostChoicesSerializer(calcrostchoices, many=True)
+        serializer = CalcRostChoicesSerializer(test_response, many=True)
         return Response(serializer.data)
 
     def create(self, request):
