@@ -8,3 +8,4 @@ from .calculatedrosterchoices import CalculatedRosterChoices
 from .rosterchoices import RosterChoices
 from .roster import Roster
 from .rosteruser import RosterUser
+from .charlink import CharLink

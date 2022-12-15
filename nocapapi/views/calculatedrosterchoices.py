@@ -3,6 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import CalculatedRosterChoices, Character, CalculatedRoster
+from django.db.models import Sum
 
 
 
@@ -30,30 +31,52 @@ class CalculatedRosterChoicesView(ViewSet):
         calcroster = request.query_params.get('calculatedroster', None)
         if calcroster is not None:
             calcrostchoices = calcrostchoices.filter(calculated_roster=calcroster)
-        serializer = CalcRostChoicesSerializer(calcrostchoices, many=True)
+            test_response = calcrostchoices.aggregate(
+                total_damage=Sum('damage'), total_healing=Sum('healing'),
+                total_kills=Sum('kills'),total_deaths=Sum('deaths'))
+                
+        serializer = CalcRostChoicesSerializer(test_response, many=True)
         return Response(serializer.data)
 
     def create(self, request):
         """Handle POST operations"""
         calculatedroster = CalculatedRoster.objects.get(pk=request.data['calculated_roster'])
         character = Character.objects.get(pk=request.data['character'])
-        newrosterchoice = CalculatedRosterChoices.objects.create(
-            calculated_roster=calculatedroster,
-            character=character,
-            damage=request.data['damage'],
-            healing=request.data['healing'],
-            kills=request.data['kills'],
-            deaths=request.data['deaths'],
-            assists=request.data['assists']
+
+        if request.data['group'] != 0:
+            newrosterchoice = CalculatedRosterChoices.objects.create(
+                calculated_roster=calculatedroster,
+                character=character,
+                damage=request.data['damage'],
+                healing=request.data['healing'],
+                kills=request.data['kills'],
+                deaths=request.data['deaths'],
+                assists=request.data['assists'],
+                group=request.data['group']
         )
+        else:
+            newrosterchoice=CalculatedRosterChoices.objects.create(
+                    calculated_roster=calculatedroster,
+                    character=character,
+                    damage=request.data['damage'],
+                    healing=request.data['healing'],
+                    kills=request.data['kills'],
+                    deaths=request.data['deaths'],
+                    assists=request.data['assists']
+            )
+
         serializer = CalcRostChoicesSerializer(newrosterchoice)
         return Response(serializer.data)
-
 
 
 class CalcRostChoicesSerializer(serializers.ModelSerializer):
     """JSON serializer for game types
     """
+    total_damage = serializers.IntegerField(default=None)
+    total_healing = serializers.IntegerField(default=None)
+    total_deaths = serializers.IntegerField(default=None)
+    total_kills = serializers.IntegerField(default=None)
     class Meta:
         model = CalculatedRosterChoices
-        fields = ('id', 'character', 'calculated_roster', 'damage', 'healing', 'kills', 'deaths', 'assists' )
+        fields = ('id', 'character', 'calculated_roster', 'damage', 'healing', 'kills', 'deaths', 'assists', 'group', 'total_damage', 'total_healing', 'total_deaths', 'total_kills'   )
+        depth = 1

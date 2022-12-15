@@ -10,3 +10,4 @@ from .calculatedrosterchoices import CalculatedRosterChoicesView
 from .rosterchoices import RosterChoicesView
 from .rosteruser import RosterUserView
 from .user import UserView
+from .charlink import CharLinkView
