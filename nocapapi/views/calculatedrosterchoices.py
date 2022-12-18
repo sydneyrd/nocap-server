@@ -33,33 +33,7 @@ class CalculatedRosterChoicesView(ViewSet):
     
         serializer = CalcRostChoicesSerializer(calcrostchoices, many=True)
         return Response(serializer.data)
-    # def list(self, request):
-    #     """Handle GET requests to get all game types
-    #     Returns:
-    #         Response -- JSON serialized list of game types
-    #     """
-    #     calcrostchoices = CalculatedRosterChoices.objects.all()
-    #     calcroster = request.query_params.get('calculatedroster', None)
-    #     if calcroster is not None:
-    #         calcrostchoices = calcrostchoices.filter(calculated_roster=calcroster).aggregate(
-    #             total_damage=Sum('damage'), total_healing=Sum('healing'),
-    #             total_kills=Sum('kills'),total_deaths=Sum('deaths'))
-            
-    #         total_damage = calcrostchoices['total_damage']
-    #         total_healing = calcrostchoices['total_healing']
-    #         total_kills = calcrostchoices['total_kills']
-    #         total_deaths = calcrostchoices['total_deaths']
         
-    #     for choice in calcrostchoices:
-    #             total_damage = choice.total_damage
-    #             total_healing = choice.total_healing
-    #             total_kills = choice.total_kills
-    #             total_deaths = choice.total_deaths
-
-
-    #     serializer = CalcRostChoicesSerializer(calcrostchoices, many=True)
-    #     return Response(serializer.data)
-
     def create(self, request):
         """Handle POST operations"""
         calculatedroster = CalculatedRoster.objects.get(pk=request.data['calculated_roster'])

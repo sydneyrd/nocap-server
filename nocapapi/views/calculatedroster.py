@@ -3,76 +3,40 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import CalculatedRoster, RosterUser, Roster, CalculatedRosterChoices
-from django.db import connection
+from django.db.models import Sum, Aggregate
+
 
 
 class CalculatedRosterView(ViewSet):
     """Level up game types view"""
-
     def retrieve(self, request, pk):
         try:
+        # Retrieve the CalculatedRoster object
             calroster = CalculatedRoster.objects.get(pk=pk)
+
+        # Serialize the object
             serializer = CalculatedRosterSerializer(calroster)
 
-        # Obtain a database cursor
-            cursor = connection.cursor()
+        # Retrieve the related CalculatedRosterChoice objects
+            choices = CalculatedRosterChoices.objects.filter(calculated_roster=calroster)
 
-        # Execute the SELECT statement and fetch the results
-            cursor.execute("""
-            SELECT SUM(nocapapi_calculatedrosterchoices.damage) AS total_damage,
-                   SUM(nocapapi_calculatedrosterchoices.healing) AS total_healing,
-                   SUM(nocapapi_calculatedrosterchoices.kills) AS total_kills,
-                   SUM(nocapapi_calculatedrosterchoices.deaths) AS total_deaths
-            FROM nocapapi_calculatedroster
-            JOIN nocapapi_calculatedrosterchoices
-              ON nocapapi_calculatedroster.id = nocapapi_calculatedrosterchoices.calculated_roster_id
-            WHERE nocapapi_calculatedroster.id = %s
-        """, (pk,))
-            row = cursor.fetchone()
-            calroster.total_damage = row[0]
-            calroster.total_healing = row[1]
-            calroster.total_kills = row[2]
-            calroster.total_deaths = row[3]
-            calroster.save()
+        # Sum the damage, healing, kills, and deaths fields of the choices
+            aggregates = choices.aggregate(
+                total_damage=Sum('damage'),
+                total_healing=Sum('healing'),
+                total_kills=Sum('kills'),
+                total_deaths=Sum('deaths')
+            )
+
+        # Update the CalculatedRoster object with the aggregated values
+            calroster.total_damage = aggregates['total_damage']
+            calroster.total_healing = aggregates['total_healing']
+            calroster.total_kills = aggregates['total_kills']
+            calroster.total_deaths = aggregates['total_deaths']
 
             return Response(serializer.data)
         except CalculatedRoster.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
-    # def retrieve(self, request, pk):
-    #     """Handle GET requests for single war result roster type
-    #     Returns:
-    #         Response -- JSON serialized roster results"""
-    #     try:
-    #         calroster = CalculatedRoster.objects.get(pk=pk)
-    #         serializer = CalculatedRosterSerializer(calroster)
-    #         return Response(serializer.data)
-    #     except CalculatedRoster.DoesNotExist as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
-    # def retrieve(self, request, pk):
-    #     try:
-    #         calroster = CalculatedRoster.objects.get(pk=pk)
-    #         serializer = CalculatedRosterSerializer(calroster)
-
-    #     # Execute the SELECT statement and return the results as a tuple of dictionaries
-    #         results = RawSQL("""
-    #         SELECT SUM(nocapapi_calculatedrosterchoices.damage) AS army_damage,
-    #                SUM(nocapapi_calculatedrosterchoices.healing) AS army_healing,
-    #                SUM(nocapapi_calculatedrosterchoices.kills) AS army_kills,
-    #                SUM(nocapapi_calculatedrosterchoices.deaths) AS army_deaths
-    #         FROM calculated_roster
-    #         JOIN nocapapi_calculatedrosterchoices
-    #           ON calculated_roster.id = nocapapi_calculatedrosterchoices.calculated_roster_id
-    #         WHERE calculated_roster.id = %s
-    #     """, (pk,))
-
-    #     # Add the results to the serializer data
-    #         serializer.data['results'] = results
-
-    #         return Response(serializer.data)
-    #     except CalculatedRoster.DoesNotExist as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
     def list(self, request):
         """Handle GET requests to get all game types
