@@ -64,6 +64,37 @@ class CalculatedRosterChoicesView(ViewSet):
         serializer = CalcRostChoicesSerializer(newrosterchoice)
         return Response(serializer.data)
 
+    def update(self, request, pk):
+        """Handle PUT requests for a calcRosterChoice
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        calcrostchoices = CalculatedRosterChoices.objects.get(pk=pk)
+        calcrostchoices.damage = request.data['damage']
+        calcrostchoices.healing = request.data['healing']
+        calcrostchoices.kills = request.data['kills']
+        calcrostchoices.deaths = request.data['deaths']
+        calcrostchoices.assists = request.data['assists']
+        calcrostchoices.group = request.data['group']
+        calcrostchoices.save()
+
+        return Response({"character updated"}, status=status.HTTP_204_NO_CONTENT)
+    def destroy(self, request, pk):
+        """Handle DELETE requests for a single calcRosterChoice
+        Returns:
+            Response -- 200, 404, or 500 status code
+        """
+        try:
+            calcrostchoices = CalculatedRosterChoices.objects.get(pk=pk)
+            calcrostchoices.delete()
+
+            return Response({'successfully deleted from roster'}, status=status.HTTP_204_NO_CONTENT)
+
+        except CalculatedRosterChoices.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class CalcRostChoicesSerializer(serializers.ModelSerializer):
     """JSON serializer for game types
