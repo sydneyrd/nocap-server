@@ -75,7 +75,8 @@ class CalculatedRosterChoicesView(ViewSet):
         calcrostchoices.kills = request.data['kills']
         calcrostchoices.deaths = request.data['deaths']
         calcrostchoices.assists = request.data['assists']
-        calcrostchoices.group = request.data['group']
+        if request.data['group'] is not None:
+            calcrostchoices.group = request.data['group']
         calcrostchoices.save()
 
         return Response({"character updated"}, status=status.HTTP_204_NO_CONTENT)
