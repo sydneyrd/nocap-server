@@ -75,7 +75,7 @@ class CalculatedRosterChoicesView(ViewSet):
         calcrostchoices.kills = request.data['kills']
         calcrostchoices.deaths = request.data['deaths']
         calcrostchoices.assists = request.data['assists']
-        if request.data['group'] is not None:
+        if 'group' in request.data:
             calcrostchoices.group = request.data['group']
         calcrostchoices.save()
 
