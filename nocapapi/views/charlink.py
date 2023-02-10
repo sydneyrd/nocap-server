@@ -8,59 +8,55 @@ from nocapapi.models.charlink import CharLink
 
 
 class CharLinkView(ViewSet):
-    """DGR Links view"""
+    """character links view"""
 
-    # def retrieve(self, request, pk):
-    #     """Handle GET requests for single character
-    #     Returns:
-    #         Response -- JSON serialized character"""
-    #     try:
-    #         character = CharLink.objects.get(pk=pk)
-    #         serializer = CharLinkSerializer(character, many=True)
-    #         return Response(serializer.data)
-    #     except Character.DoesNotExist as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
- 
     def list(self, request):
         """Handle GET requests to get all char_links
         Returns:
             Response -- JSON serialized list of char_links
         """
-        char_links = CharLink.objects.all()
-        character = request.query_params.get('character', None)
-        if character is not None:
-            char_links = char_links.filter(character=character)
-        serializer = CharLinkSerializer(char_links, many=True)
-        return Response(serializer.data)
-        # char_link = CharLink.objects.get(pk=pk)
-        # serializer = CharLinkSerializer(char_link, many=True)
-        # return Response(serializer.data)
-
+        try:
+            char_links = CharLink.objects.all()
+            character = request.query_params.get('character', None)
+            if character is not None:
+                char_links = char_links.filter(character=character)
+            serializer = CharLinkSerializer(char_links, many=True)
+            return Response(serializer.data)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def create(self, request):
-        """Handle POST operations"""
-        character = Character.objects.get(pk=request.data['character'])
-        if request.data['roster'] > 0:
-                new_link = CharLink.objects.create(
+        """Handle POST operations for character links"""
+        try:
+            character = Character.objects.get(pk=request.data['character'])
+            if request.data['roster'] > 0:
+                    new_link = CharLink.objects.create(
+                        character=character,
+                        link=request.data['link'],
+                        calculated_roster=CalculatedRoster.objects.get(pk=request.data['roster'])
+                    )
+            else: new_link = CharLink.objects.create(
                     character=character,
                     link=request.data['link'],
-                    calculated_roster=CalculatedRoster.objects.get(pk=request.data['roster'])
-                )
-        else: new_link = CharLink.objects.create(
-                character=character,
-                link=request.data['link'],
-                )
-        serializer = CharLinkSerializer(new_link)
-        return Response(serializer.data)
+                    )
+            serializer = CharLinkSerializer(new_link)
+            return Response(serializer.data)
+        except:
+            return Response({'message': "failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     def destroy(self, request, pk):
-        link = CharLink.objects.get(pk=pk)
-        link.delete()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        """Handle DELETE requests for a single character link"""
+        try:
+            link = CharLink.objects.get(pk=pk)
+            link.delete()
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        except CharLink.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class CharLinkSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
+    """JSON serializer for character links
     """
     class Meta:
         model = CharLink
