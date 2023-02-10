@@ -57,6 +57,7 @@ class CalculatedRosterView(ViewSet):
         return Response({'message': "deleted"}, status=status.HTTP_204_NO_CONTENT)
 
 
+
 class CalculatedRosterSerializer(serializers.ModelSerializer):
 
     class Meta:

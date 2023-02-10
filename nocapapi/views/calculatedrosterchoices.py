@@ -96,15 +96,36 @@ class CalculatedRosterChoicesView(ViewSet):
 
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+
+class CalculatedRosterSerializer(serializers.ModelSerializer):
+    """JSON serializer for game types
+    """
+    class Meta:
+        model = CalculatedRoster
+        fields = ('id', 'rosterName', 'roster' )
+
+class CharacterSerializer(serializers.ModelSerializer):
+    """JSON serializer for game types
+    """
+    class Meta:
+        model = Character
+        fields = ('id',
+        "character_name",
+        "notes",
+        "image",
+        "role",
+        "faction",
+        "primary_weapon",
+        "secondary_weapon",
+        "server",
+        "user")
 
 class CalcRostChoicesSerializer(serializers.ModelSerializer):
     """JSON serializer for game types
     """
-    # total_damage = serializers.IntegerField(default=None)
-    # total_healing = serializers.IntegerField(default=None)
-    # total_deaths = serializers.IntegerField(default=None)
-    # total_kills = serializers.IntegerField(default=None)
+    calculated_roster = CalculatedRosterSerializer(many=False)
+    character = CharacterSerializer(many=False)
     class Meta:
         model = CalculatedRosterChoices
         fields = ('id', 'character', 'calculated_roster', 'damage', 'healing', 'kills', 'deaths', 'assists', 'group'  )
-        depth = 1
