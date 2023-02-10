@@ -18,22 +18,8 @@ class CalculatedRosterView(ViewSet):
             serializer = CalculatedRosterSerializer(calroster)
 
         # Retrieve the related CalculatedRosterChoice objects
-            choices = CalculatedRosterChoices.objects.filter(calculated_roster=calroster)
-
-        # Sum the damage, healing, kills, and deaths fields of the choices
-            aggregates = choices.aggregate(
-                total_damage=Sum('damage'),
-                total_healing=Sum('healing'),
-                total_kills=Sum('kills'),
-                total_deaths=Sum('deaths')
-            )
 
         # Update the CalculatedRoster object with the aggregated values
-            calroster.total_damage = aggregates['total_damage']
-            calroster.total_healing = aggregates['total_healing']
-            calroster.total_kills = aggregates['total_kills']
-            calroster.total_deaths = aggregates['total_deaths']
-
             return Response(serializer.data)
         except CalculatedRoster.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
@@ -67,7 +53,8 @@ class CalculatedRosterView(ViewSet):
     def destroy(self, request, pk):
         calculatedroster = CalculatedRoster.objects.get(pk=pk)
         calculatedroster.delete()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+        return Response({'message': "deleted"}, status=status.HTTP_204_NO_CONTENT)
 
 
 class CalculatedRosterSerializer(serializers.ModelSerializer):
