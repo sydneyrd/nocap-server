@@ -4,9 +4,6 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import CalculatedRosterChoices, Character, CalculatedRoster
 
-
-
-
 class CalculatedRosterChoicesView(ViewSet):
     """Calculated Roster Choices/ the characters on rosters view"""
     def retrieve(self, request, pk):
@@ -90,13 +87,13 @@ class CalculatedRosterChoicesView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def destroy(self, request, pk):
-        """Handle DELETE requests for a single calcRosterChoice
+        """Handle DELETE requests for a single calculated Roster Choice
         Returns:
             Response -- 200, 404, or 500 status code
         """
         try:
-            calcrostchoices = CalculatedRosterChoices.objects.get(pk=pk)
-            calcrostchoices.delete()
+            calculated_roster_choice = CalculatedRosterChoices.objects.get(pk=pk)
+            calculated_roster_choice.delete()
 
             return Response({'successfully deleted from roster'}, status=status.HTTP_204_NO_CONTENT)
 
