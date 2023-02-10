@@ -10,33 +10,32 @@ class RosterUserView(ViewSet):
     """Level up game types view"""
 
     def retrieve(self, request, pk):
-        """Handle GET requests for single game type
+        """Handle GET requests for roster user
         Returns:
-            Response -- JSON serialized game type"""
+            Response -- JSON serialized roster user"""
         try:
-            rosteruser = RosterUser.objects.get(pk=pk)
-            serializer = RosterUserSerializer(rosteruser)
+            roster_user = RosterUser.objects.get(pk=pk)
+            serializer = RosterUserSerializer(roster_user)
             return Response(serializer.data)
         except RosterUser.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        
-
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
     def list(self, request):
-        """Handle GET requests to get all game types
+        """Handle GET requests to get all roster user
         Returns:
-            Response -- JSON serialized list of game types
+            Response -- JSON serialized list of roster user
         """
-        rosteruser = RosterUser.objects.all()
-        # game_type = request.query_params.get('type', None)
-        # if game_type is not None:
-        #     games = games.filter(game_type_id=game_type)
-        serializer = RosterUserSerializer(rosteruser, many=True)
-        return Response(serializer.data)
-
+        try:
+            roster_user = RosterUser.objects.all()
+            serializer = RosterUserSerializer(roster_user, many=True)
+            return Response(serializer.data)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
 
 class RosterUserSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
+    """JSON serializer for roster users
     """
     class Meta:
         model = RosterUser

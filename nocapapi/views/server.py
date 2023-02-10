@@ -7,36 +7,38 @@ from nocapapi.models import Server
 
 
 class ServerView(ViewSet):
-    """Level up game types view"""
+    """server view"""
 
     def retrieve(self, request, pk):
-        """Handle GET requests for single game type
+        """Handle GET requests for a single server
         Returns:
-            Response -- JSON serialized game type"""
+            Response -- JSON serialized server instance"""
         try:
             server = Server.objects.get(pk=pk)
             serializer = ServerSerializer(server)
             return Response(serializer.data)
         except Server.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         
 
     def list(self, request):
-        """Handle GET requests to get all game types
+        """Handle GET requests to get all servers
         Returns:
-            Response -- JSON serialized list of game types
+            Response -- JSON serialized list of servers
         """
-        server = Server.objects.all()
-        # game_type = request.query_params.get('type', None)
-        # if game_type is not None:
-        #     games = games.filter(game_type_id=game_type)
-        serializer = ServerSerializer(server, many=True)
-        return Response(serializer.data)
+        try:
+            server = Server.objects.all()
+            serializer = ServerSerializer(server, many=True)
+            return Response(serializer.data)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
 
 
 class ServerSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
+    """JSON serializer for servers
     """
     class Meta:
         model = Server
