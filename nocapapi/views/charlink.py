@@ -2,10 +2,8 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from nocapapi.models import  Character, CalculatedRoster
+from nocapapi.models import Character, CalculatedRoster
 from nocapapi.models.charlink import CharLink
-
-
 
 class CharLinkView(ViewSet):
     """character links view"""
@@ -18,31 +16,34 @@ class CharLinkView(ViewSet):
         try:
             char_links = CharLink.objects.all()
             character = request.query_params.get('character', None)
-            
+
             char_links = char_links.filter(character=character)
-            if len(char_links) != 0:        
-                    serializer = CharLinkSerializer(char_links, many=True)
-                    return Response(serializer.data)
+            if len(char_links) != 0:
+                serializer = CharLinkSerializer(char_links, many=True)
+                return Response(serializer.data)
             else:
                 return Response({'message': 'character not found'}, status=status.HTTP_404_NOT_FOUND)
         except character.DoesNotExist as ex:
             return Response({'message': "failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     def create(self, request):
         """Handle POST operations for character links"""
         try:
             character = Character.objects.get(pk=request.data['character'])
             if request.data['roster'] > 0:
-                    new_link = CharLink.objects.create(
-                        character=character,
-                        link=request.data['link'],
-                        calculated_roster=CalculatedRoster.objects.get(pk=request.data['roster'])
-                    )
-            else: new_link = CharLink.objects.create(
+                new_link = CharLink.objects.create(
                     character=character,
                     link=request.data['link'],
-                    )
+                    calculated_roster=CalculatedRoster.objects.get(
+                        pk=request.data['roster'])
+                )
+            else:
+                new_link = CharLink.objects.create(
+                    character=character,
+                    link=request.data['link'],
+                )
             serializer = CharLinkSerializer(new_link)
             return Response(serializer.data)
         except:
@@ -58,9 +59,6 @@ class CharLinkView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
-
 
 class CharLinkSerializer(serializers.ModelSerializer):
     """JSON serializer for character links
