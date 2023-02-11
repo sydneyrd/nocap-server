@@ -7,56 +7,69 @@ from nocapapi.models import Roster, RosterUser
 
 
 class RosterView(ViewSet):
-    """Level up game types view"""
-
+    """Roster view"""
     def retrieve(self, request, pk):
-        """Handle GET requests for single game type
+        """Handle GET requests for single roster
         Returns:
-            Response -- JSON serialized game type"""
+            Response -- JSON serialized single roster"""
         try:
             roster = Roster.objects.get(pk=pk)
             serializer = RosterSerializer(roster)
             return Response(serializer.data)
         except Roster.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         
 
     def list(self, request):
-        """Handle GET requests to get all game types
+        """Handle GET requests to get all rosters
         Returns:
-            Response -- JSON serialized list of game types
+            Response -- JSON serialized list of rosters
         """
-        roster = Roster.objects.all()
-        roster_user = request.query_params.get('user', None)
-        if roster_user is not None:
-            roster = roster.filter(user=roster_user)
-        serializer = RosterSerializer(roster, many=True)
+        try:
+            roster = Roster.objects.all()
+            roster_user = request.query_params.get('user', None)
+            if roster_user is not None:
+                roster = roster.filter(user=roster_user)
+            serializer = RosterSerializer(roster, many=True)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         return Response(serializer.data)
     def create(self, request):
-        """Handle POST operations"""
-        user = RosterUser.objects.get(user_id=request.auth.user)
-        
-        newroster = Roster.objects.create(
-            user=user
-        )
-        serializer = RosterSerializer(newroster)
-        return Response(serializer.data)
+        """Handle POST operations for rosters"""
+        try:
+            user = RosterUser.objects.get(user_id=request.auth.user)
+            new_roster = Roster.objects.create(
+                user=user
+            )
+            serializer = RosterSerializer(new_roster)
+            return Response(serializer.data)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
     def destroy(self, request, pk):
-        roster = Roster.objects.get(pk=pk)
-        roster.delete()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        """Handle DELETE requests for a single roster"""
+        try:
+            roster = Roster.objects.get(pk=pk)
+            roster.delete()
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        except Roster.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
     def update(self, request, pk):
-        """handle put"""
-        roster = Roster.objects.get(pk=pk)
-        roster.name = request.data["name"]
-        roster.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
-
-
+        """handle put for roster"""
+        try:
+            roster = Roster.objects.get(pk=pk)
+            roster.name = request.data["name"]
+            roster.save()
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        except Roster.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class RosterSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
+    """JSON serializer for  rosters
     """
     class Meta:
         model = Roster

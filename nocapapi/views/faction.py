@@ -7,12 +7,11 @@ from nocapapi.models import Faction
 
 
 class FactionView(ViewSet):
-    """Level up game types view"""
+    """faction view"""
 
     def retrieve(self, request, pk):
-        """Handle GET requests for single game type
-        Returns:
-            Response -- JSON serialized game type"""
+        """Handle GET requests for single faction
+            Response -- JSON serialized faction"""
         try:
             faction = Faction.objects.get(pk=pk)
             serializer = FactionSerializer(faction)
@@ -22,21 +21,21 @@ class FactionView(ViewSet):
         
 
     def list(self, request):
-        """Handle GET requests to get all game types
+        """Handle GET requests to get all factions
         Returns:
-            Response -- JSON serialized list of game types
+            Response -- JSON serialized list of factions
         """
-        faction = Faction.objects.all()
-        # game_type = request.query_params.get('type', None)
-        # if game_type is not None:
-        #     games = games.filter(game_type_id=game_type)
-        serializer = FactionSerializer(faction, many=True)
-        return Response(serializer.data)
+        try:
+            faction = Faction.objects.all()
+            serializer = FactionSerializer(faction, many=True)
+            return Response(serializer.data)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
 
 
 class FactionSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
+    """JSON serializer for factions
     """
     class Meta:
         model = Faction
