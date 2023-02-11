@@ -33,7 +33,10 @@ class CalculatedRosterView(ViewSet):
     def create(self, request):
         """Handle POST operations for calculated rosters"""
         user = RosterUser.objects.get(user_id=request.auth.user)
-        roster = Roster.objects.get(pk=request.data['roster'])
+        if request.data['roster'] is not None:
+            roster = Roster.objects.get(pk=request.data['roster'])
+        else: 
+            roster = None
         try:
             new_roster = CalculatedRoster.objects.create(
                 user=user,
