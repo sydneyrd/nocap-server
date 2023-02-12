@@ -10,6 +10,7 @@ django-cors-headers = "*"
 pillow = "*"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.9"
