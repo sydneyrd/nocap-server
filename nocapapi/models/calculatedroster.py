@@ -9,7 +9,7 @@ class CalculatedRoster(models.Model):
     
     @property
     def total_damage(self):
-        return self.calculatedrosterchoices.Aggregate(total_damage=Sum('damage'))['total_damage']
+        return self.calculatedrosterchoices.aggregate(total_damage=Sum('damage'))['total_damage']
 
     @property
     def total_healing(self):

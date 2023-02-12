@@ -40,8 +40,12 @@ class CalculatedRosterChoicesView(ViewSet):
         calculated_roster = CalculatedRoster.objects.get(pk=request.data['calculated_roster'])
         character = Character.objects.get(pk=request.data['character'])
         try:
-            if request.data['group'] != 0:
-                new_roster_choice = CalculatedRosterChoices.objects.create(
+            
+            if 'group' in request.data:
+                group = request.data['group']
+            else:
+                group = 0
+            new_roster_choice = CalculatedRosterChoices.objects.create(
                     calculated_roster=calculated_roster,
                     character=character,
                     damage=request.data['damage'],
@@ -49,19 +53,8 @@ class CalculatedRosterChoicesView(ViewSet):
                     kills=request.data['kills'],
                     deaths=request.data['deaths'],
                     assists=request.data['assists'],
-                    group=request.data['group']
+                    group=group
             )
-            else:
-                new_roster_choice=CalculatedRosterChoices.objects.create(
-                        calculated_roster=calculated_roster,
-                        character=character,
-                        damage=request.data['damage'],
-                        healing=request.data['healing'],
-                        kills=request.data['kills'],
-                        deaths=request.data['deaths'],
-                        assists=request.data['assists']
-                )
-
             serializer = CalcRostChoicesSerializer(new_roster_choice)
             return Response(serializer.data)
         except Exception as ex:
