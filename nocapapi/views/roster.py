@@ -40,11 +40,17 @@ class RosterView(ViewSet):
         """Handle POST operations for rosters"""
         try:
             user = RosterUser.objects.get(user_id=request.auth.user)
-            new_roster = Roster.objects.create(
-                user=user
-            )
+            if 'name' in request.data:
+                new_roster = Roster.objects.create(
+                    name=request.data["name"],
+                    user=user
+                )
+            else:
+                new_roster = Roster.objects.create(
+                    user=user
+                )
             serializer = RosterSerializer(new_roster)
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
