@@ -49,6 +49,7 @@ class CalculatedRosterView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
     def destroy(self, request, pk):
         """Handle DELETE requests for a single calculated roster"""
         try:
