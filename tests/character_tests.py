@@ -74,3 +74,10 @@ class CharacterTests(APITestCase):
         self.assertEqual(character.secondary_weapon_id, new_character["secondary_weapon"])
         self.assertEqual(character.server_id, new_character["server"])
         self.assertEqual(status.HTTP_204_NO_CONTENT, response.status_code)
+    def test_delete_character(self):
+        """Delete character test"""
+        character = Character.objects.first()
+        url = f"/characters/{character.pk}"
+        response = self.client.delete(url)
+        self.assertEqual(status.HTTP_204_NO_CONTENT, response.status_code)
+        self.assertFalse(Character.objects.filter(pk=character.pk).exists())
