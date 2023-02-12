@@ -1,7 +1,6 @@
 from rest_framework import status
 from rest_framework.test import APITestCase
-from rest_framework.authtoken.models import Token
-from nocapapi.models import  RosterUser, Weapon
+from nocapapi.models import Weapon
 from nocapapi.views.weapon import WeaponSerializer
 
 class WeaponTests(APITestCase):

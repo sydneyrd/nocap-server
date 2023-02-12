@@ -1,7 +1,6 @@
 from rest_framework import status
 from rest_framework.test import APITestCase
-from rest_framework.authtoken.models import Token
-from nocapapi.models import  RosterUser, Server
+from nocapapi.models import  Server
 from nocapapi.views.server import ServerSerializer
 
 class ServerTests(APITestCase):
