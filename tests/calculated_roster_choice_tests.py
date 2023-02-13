@@ -48,3 +48,25 @@ class CalculatedRosterChoicesTests(APITestCase):
         url = f"/calculatedrosterchoices"
         response = self.client.get(url)
         self.assertEqual(status.HTTP_405_METHOD_NOT_ALLOWED, response.status_code)
+    def test_update_calculated_roster_choice(self):
+        """Update calc roster test"""
+        calculated_roster_choice = CalculatedRosterChoices.objects.first()
+        url = f"/calculatedrosterchoices/{calculated_roster_choice.pk}"
+        data = {
+            "calculated_roster": CalculatedRoster.objects.first().pk,    
+            "damage": 100,
+    "healing": 100,
+    "kills": 100,
+    "deaths": 100,
+    "assists": 100,
+    "group": 1
+        }       
+        response = self.client.put(url, data, format="json")
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertEqual(data["calculated_roster"], response.data["calculated_roster"]['id'])
+        self.assertEqual(data["damage"], response.data["damage"])
+        self.assertEqual(data["healing"], response.data["healing"])
+        self.assertEqual(data["kills"], response.data["kills"])
+        self.assertEqual(data["deaths"], response.data["deaths"])
+        self.assertEqual(data['assists'], response.data['assists'])
+        #currently not accounting for character, or group number, needs to be added
