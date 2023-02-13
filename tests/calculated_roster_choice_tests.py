@@ -70,3 +70,10 @@ class CalculatedRosterChoicesTests(APITestCase):
         self.assertEqual(data["deaths"], response.data["deaths"])
         self.assertEqual(data['assists'], response.data['assists'])
         #currently not accounting for character, or group number, needs to be added
+    def test_delete_calculated_roster_choice(self):
+        """Delete calc roster choice test"""
+        calculated_roster_choice = CalculatedRosterChoices.objects.first()
+        url = f"/calculatedrosterchoices/{calculated_roster_choice.pk}"
+        response = self.client.delete(url)
+        self.assertEqual(status.HTTP_204_NO_CONTENT, response.status_code)
+        self.assertEqual(0, CalculatedRosterChoices.objects.filter(pk=calculated_roster_choice.pk).count())
