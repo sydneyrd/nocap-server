@@ -5,7 +5,6 @@ from nocapapi.views.rosterchoices import RostChoicesSerializer
 
 class RosterChoicesTests(APITestCase):
     """ Roster choices tests"""
-
     def test_create_calculated_roster_choice(self):
         """Create a roster choice test"""
         url = "/rosterchoices"

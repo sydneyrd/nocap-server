@@ -27,3 +27,4 @@ class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTes
     pass
 
 
+#should i even have the ability to get and read rosterusers etc?   ask around and then I can implement tests to support whichever direction
