@@ -28,7 +28,8 @@ class CalculatedRosterChoicesView(ViewSet):
             calculated_roster = request.query_params.get('calculatedroster', None)
             if calculated_roster is not None:
                 calculated_roster_choices = calculated_roster_choices.filter(calculated_roster=calculated_roster)
-        
+            else:
+                return Response({'message': 'No calculated roster provided'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
             serializer = CalcRostChoicesSerializer(calculated_roster_choices, many=True)
             return Response(serializer.data)
         except CalculatedRosterChoices.DoesNotExist as ex:
@@ -36,7 +37,9 @@ class CalculatedRosterChoicesView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def create(self, request):
-        """Handle POST operations for calculated roster choices"""
+        """Handle POST operations for calculated roster choices
+        Returns:
+            Response -- JSON serialized calculated roster choice instance, status code 201"""
         calculated_roster = CalculatedRoster.objects.get(pk=request.data['calculated_roster'])
         character = Character.objects.get(pk=request.data['character'])
         try:
@@ -56,14 +59,15 @@ class CalculatedRosterChoicesView(ViewSet):
                     group=group
             )
             serializer = CalcRostChoicesSerializer(new_roster_choice)
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def update(self, request, pk):
         """Handle PUT requests for a calcRosterChoice
         Returns:
-            Response -- Empty body with 204 status code
+            Response -- object with updated values, with 200 status code
         """
+        #does not allow for changing characters right now, need to be added
         try:
             calculated_roster_choice = CalculatedRosterChoices.objects.get(pk=pk)
             calculated_roster_choice.damage = request.data['damage']
@@ -74,7 +78,8 @@ class CalculatedRosterChoicesView(ViewSet):
             if 'group' in request.data:
                 calculated_roster_choice.group = request.data['group']
             calculated_roster_choice.save()
-            return Response({"character updated"}, status=status.HTTP_204_NO_CONTENT)
+            serializer = CalcRostChoicesSerializer(calculated_roster_choice)
+            return Response(serializer.data, status=status.HTTP_200_OK)
         except CalculatedRosterChoices.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
@@ -82,27 +87,24 @@ class CalculatedRosterChoicesView(ViewSet):
     def destroy(self, request, pk):
         """Handle DELETE requests for a single calculated Roster Choice
         Returns:
-            Response -- 200, 404, or 500 status code
+            Response -- 204, 404, or 500 status code
         """
         try:
             calculated_roster_choice = CalculatedRosterChoices.objects.get(pk=pk)
             calculated_roster_choice.delete()
-
             return Response({'successfully deleted from roster'}, status=status.HTTP_204_NO_CONTENT)
-
         except CalculatedRosterChoices.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 class CalculatedRosterSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
+    """JSON serializer for calculated rosters
     """
     class Meta:
         model = CalculatedRoster
         fields = ('id', 'rosterName', 'roster' )
 class CharacterSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
+    """JSON serializer for characters
     """
     class Meta:
         model = Character
@@ -117,7 +119,7 @@ class CharacterSerializer(serializers.ModelSerializer):
         "server",
         "user")
 class CalcRostChoicesSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
+    """JSON serializer for calcrosterchoices 
     """
     calculated_roster = CalculatedRosterSerializer(many=False)
     character = CharacterSerializer(many=False)

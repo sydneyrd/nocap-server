@@ -4,8 +4,6 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import Roster, RosterUser
 
-
-
 class RosterView(ViewSet):
     """Roster view"""
     def retrieve(self, request, pk):
@@ -20,31 +18,42 @@ class RosterView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        
-
     def list(self, request):
         """Handle GET requests to get all rosters
-        Returns:
-            Response -- JSON serialized list of rosters
-        """
+    Returns:
+        Response -- JSON serialized list of rosters
+    """
         try:
             roster = Roster.objects.all()
-            roster_user = request.query_params.get('user', None)
+            str_user = request.query_params.get('user', None)
+            roster_user = RosterUser.objects.get(pk=str_user)
             if roster_user is not None:
                 roster = roster.filter(user=roster_user)
-            serializer = RosterSerializer(roster, many=True)
-        except Exception as ex:
+                serializer = RosterSerializer(roster, many=True)
+                return Response(serializer.data, status=status.HTTP_200_OK)
+        except Roster.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        return Response(serializer.data)
+        except RosterUser.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+            
     def create(self, request):
         """Handle POST operations for rosters"""
         try:
             user = RosterUser.objects.get(user_id=request.auth.user)
-            new_roster = Roster.objects.create(
-                user=user
-            )
+            if 'name' in request.data:
+                new_roster = Roster.objects.create(
+                    name=request.data["name"],
+                    user=user
+                )
+            else:
+                new_roster = Roster.objects.create(
+                    user=user
+                )
             serializer = RosterSerializer(new_roster)
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         

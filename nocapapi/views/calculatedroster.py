@@ -34,18 +34,22 @@ class CalculatedRosterView(ViewSet):
     def create(self, request):
         """Handle POST operations for calculated rosters"""
         user = RosterUser.objects.get(user_id=request.auth.user)
-        if request.data['roster'] is not None:
+        if 'roster' in request.data:
             roster = Roster.objects.get(pk=request.data['roster'])
         else: 
             roster = None
+        if 'rosterName' in request.data:
+            name = request.data['rosterName']
+        else:
+            name = None    
         try:
             new_roster = CalculatedRoster.objects.create(
                 user=user,
-                rosterName=request.data['rosterName'],
+                rosterName=name,
                 roster=roster
             )
             serializer = CalculatedRosterSerializer(new_roster)
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
