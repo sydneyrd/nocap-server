@@ -16,7 +16,6 @@ class CharLinkView(ViewSet):
         try:
             char_links = CharLink.objects.all()
             character = request.query_params.get('character', None)
-
             char_links = char_links.filter(character=character)
             if len(char_links) != 0:
                 serializer = CharLinkSerializer(char_links, many=True)
@@ -32,12 +31,12 @@ class CharLinkView(ViewSet):
         """Handle POST operations for character links"""
         try:
             character = Character.objects.get(pk=request.data['character'])
-            if request.data['roster'] > 0:
+            if 'calculated_roster' in request.data:
                 new_link = CharLink.objects.create(
                     character=character,
                     link=request.data['link'],
                     calculated_roster=CalculatedRoster.objects.get(
-                        pk=request.data['roster'])
+                        pk=request.data['calculated_roster'])
                 )
             else:
                 new_link = CharLink.objects.create(
@@ -45,7 +44,7 @@ class CharLinkView(ViewSet):
                     link=request.data['link'],
                 )
             serializer = CharLinkSerializer(new_link)
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         except:
             return Response({'message': "failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

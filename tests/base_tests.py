@@ -9,6 +9,7 @@ from tests.faction_tests import FactionTests
 from tests.roster_tests import RosterTests
 from tests.calculated_roster_tests import CalculatedRosterTests
 from tests.calculated_roster_choice_tests import CalculatedRosterChoicesTests
+from tests.char_link_tests import CharLinkTests
 
 
 class BaseTestCase(TestCase):
@@ -21,7 +22,7 @@ class BaseTestCase(TestCase):
         self.client.credentials(HTTP_AUTHORIZATION=f"Token {token.key}")
 
 
-class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests):
+class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests):
     pass
 
 
