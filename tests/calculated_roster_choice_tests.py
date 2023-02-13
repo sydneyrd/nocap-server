@@ -17,7 +17,6 @@ class CalculatedRosterChoicesTests(APITestCase):
     "deaths": 100,
     "assists": 100, 
     "group": 1 
-
         }
         response = self.client.post(url, data, format="json")
         self.assertEqual(status.HTTP_201_CREATED, response.status_code)
@@ -29,3 +28,23 @@ class CalculatedRosterChoicesTests(APITestCase):
         self.assertEqual(data["deaths"], response.data["deaths"])
         self.assertEqual(data["assists"], response.data["assists"])
         self.assertEqual(data["group"], response.data["group"])
+    def test_get_calculated_roster_choice(self):
+        """Get single calc roster test"""
+        calculated_roster_choice = CalculatedRosterChoices.objects.first()
+        response = self.client.get(f"/calculatedrosterchoices/{calculated_roster_choice.pk}")
+        expected = CalcRostChoicesSerializer(calculated_roster_choice)
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertEqual(expected.data, response.data)
+    def test_get_calculated_roster_choices(self):
+        """Get calc rosters test"""
+        url = f"/calculatedrosterchoices?calculatedroster={CalculatedRoster.objects.first().pk}"
+        response = self.client.get(url)
+        calculated_roster_choices = CalculatedRosterChoices.objects.filter(calculated_roster=CalculatedRoster.objects.first())
+        expected = CalcRostChoicesSerializer(calculated_roster_choices, many=True)
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertEqual(expected.data, response.data)
+    def test_get_calculated_roster_choices_no_calculated_roster(self):
+        """Get calc rosters test"""
+        url = f"/calculatedrosterchoices"
+        response = self.client.get(url)
+        self.assertEqual(status.HTTP_405_METHOD_NOT_ALLOWED, response.status_code)

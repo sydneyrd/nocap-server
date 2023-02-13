@@ -28,7 +28,8 @@ class CalculatedRosterChoicesView(ViewSet):
             calculated_roster = request.query_params.get('calculatedroster', None)
             if calculated_roster is not None:
                 calculated_roster_choices = calculated_roster_choices.filter(calculated_roster=calculated_roster)
-        
+            else:
+                return Response({'message': 'No calculated roster provided'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
             serializer = CalcRostChoicesSerializer(calculated_roster_choices, many=True)
             return Response(serializer.data)
         except CalculatedRosterChoices.DoesNotExist as ex:
