@@ -55,4 +55,10 @@ class CalculatedRosterTests(APITestCase):
         response = self.client.post(url, data, format="json")
         self.assertEqual(status.HTTP_201_CREATED, response.status_code)
         self.assertEqual(data["user"], response.data["user"]["id"])
-        self.assertEqual(data["rosterName"], response.data["rosterName"])     
+        self.assertEqual(data["rosterName"], response.data["rosterName"]) 
+    def test_delete_calculated_roster(self):
+        """Delete calc roster test"""
+        calculated_roster = CalculatedRoster.objects.first()
+        response = self.client.delete(f"/calculatedrosters/{calculated_roster.pk}")
+        self.assertEqual(status.HTTP_204_NO_CONTENT, response.status_code)
+        self.assertEqual({'message': "deleted"}, response.data)    

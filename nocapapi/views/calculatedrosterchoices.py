@@ -56,7 +56,7 @@ class CalculatedRosterChoicesView(ViewSet):
                     group=group
             )
             serializer = CalcRostChoicesSerializer(new_roster_choice)
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def update(self, request, pk):
