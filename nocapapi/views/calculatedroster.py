@@ -45,7 +45,7 @@ class CalculatedRosterView(ViewSet):
                 roster=roster
             )
             serializer = CalculatedRosterSerializer(new_roster)
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

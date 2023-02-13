@@ -3,9 +3,8 @@ from rest_framework.test import APITestCase
 from nocapapi.models import Roster
 from nocapapi.views.roster import RosterSerializer
 
-
 class RosterTests(APITestCase):
-    
+    """Roster tests"""
     def test_create_roster(self):
         """Create roster test"""
         url = "/rosters"

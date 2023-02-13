@@ -4,8 +4,6 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import Roster, RosterUser
 
-
-
 class RosterView(ViewSet):
     """Roster view"""
     def retrieve(self, request, pk):
@@ -20,48 +18,6 @@ class RosterView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        
-
-    # def list(self, request):
-    #     """Handle GET requests to get all rosters
-    #     Returns:
-    #         Response -- JSON serialized list of rosters
-    #     """
-    #     try:
-    #         roster = Roster.objects.all()
-    #         roster_user = request.query_params.get('user', None)
-    #     except Roster.DoesNotExist as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-    #     except Exception as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-    #     if roster_user is not None:
-    #         roster = roster.filter(user=roster_user)
-    #         serializer = RosterSerializer(roster, many=True)
-    #         return Response(serializer.data, status=status.HTTP_200_OK)
-    #     else:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
-    # def list(self, request):
-    #     """Handle GET requests to get all rosters
-    #     Returns:
-    #         Response -- JSON serialized list of rosters
-    #     """
-    #     try:
-    #         roster = Roster.objects.all()
-    #         str_user = request.query_params.get('user', None)
-    #         roster_user = RosterUser.objects.get(pk=str_user)
-    #         if roster_user is not None:
-    #             roster = roster.filter(user=roster_user)
-    #             serializer = RosterSerializer(roster, many=True)
-    #             return Response(serializer.data, status=status.HTTP_200_OK)
-    #     except Roster.DoesNotExist as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-    #     except RosterUser.DoesNotExist as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-    #     except Exception as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
     def list(self, request):
         """Handle GET requests to get all rosters
     Returns:
