@@ -10,10 +10,11 @@ from tests.roster_tests import RosterTests
 from tests.calculated_roster_tests import CalculatedRosterTests
 from tests.calculated_roster_choice_tests import CalculatedRosterChoicesTests
 from tests.char_link_tests import CharLinkTests
+from tests.roster_choices_tests import RosterChoicesTests
 
 
 class BaseTestCase(TestCase):
-    fixtures = ['users', 'tokens', 'rosterusers',  'weapons', 'factions', 'roles', 'servers', 'characters', 'rosters', 'calculated_rosters', 'calculated_roster_choices']
+    fixtures = ['users', 'tokens', 'rosterusers',  'weapons', 'factions', 'roles', 'servers', 'characters', 'rosters', 'calculated_rosters', 'calculated_roster_choices', 'roster_choices']
     
     def setUp(self):
         """Grab the first rosteruser object from the database and add their token to the headers"""
@@ -22,7 +23,7 @@ class BaseTestCase(TestCase):
         self.client.credentials(HTTP_AUTHORIZATION=f"Token {token.key}")
 
 
-class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests):
+class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests, RosterChoicesTests):
     pass
 
 
