@@ -7,6 +7,7 @@ from nocapapi.models import RosterUser, Weapon, Role, Faction, Server
 import uuid
 import base64
 from django.core.files.base import ContentFile
+from django.db.models import Q
 
 
 class CharacterView(ViewSet):
@@ -29,17 +30,22 @@ class CharacterView(ViewSet):
             Response -- JSON serialized list of characters
         """
         try:
+            roster_user = RosterUser.objects.get(user=request.auth.user.id)
             characters = Character.objects.all()
             user_char = request.query_params.get('user', None)
+            search_text = request.query_params.get('search', None)
+            if search_text is not None:
+                characters = Character.objects.filter(
+                    Q(character_name__contains=search_text) & Q(user_id=roster_user)
+                    )
             if user_char is not None:
-                characters = characters.filter(user_id=user_char)
+                characters = characters.filter(user_id=roster_user)
             serializer = CharacterSerializer(characters, many=True)
             return Response(serializer.data)
         except Character.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
     def create(self, request):
         """Handle POST operations for characters"""
         try:
@@ -81,7 +87,6 @@ class CharacterView(ViewSet):
             character.server = Server.objects.get(pk=request.data["server"])
             character.character_name = request.data["character_name"]
             if 'image' in request.data:
-
                 if request.data["image"].startswith('data'):
                     format, imgstr = request.data["image"].split(';base64,')
                     ext = format.split('/')[-1]
@@ -100,7 +105,6 @@ class CharacterView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
     def destroy(self, request, pk):
         """Handle DELETE requests for a single character"""
         try:
