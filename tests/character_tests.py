@@ -1,6 +1,6 @@
 from rest_framework import status
 from rest_framework.test import APITestCase
-from nocapapi.models import Character, Server, Role, Faction, Weapon
+from nocapapi.models import Character, Server, Role, Faction, Weapon, RosterUser
 from nocapapi.views.character import CharacterSerializer
 
 class CharacterTests(APITestCase):
@@ -71,3 +71,19 @@ class CharacterTests(APITestCase):
         response = self.client.delete(url)
         self.assertEqual(status.HTTP_204_NO_CONTENT, response.status_code)
         self.assertFalse(Character.objects.filter(pk=character.pk).exists())
+    def test_search_characters_by_name(self):
+        """Test searching for characters by name"""
+        # Create some test characters
+        roster_user = RosterUser.objects.first()
+        character1 = Character.objects.create(character_name='John Doe', notes='hi', user=roster_user, faction=Faction.objects.first(), role=Role.objects.first(), primary_weapon=Weapon.objects.first(), secondary_weapon=Weapon.objects.first(), server=Server.objects.first())
+        character2 = Character.objects.create(character_name='Jane Doe', notes='hi', user=roster_user, faction=Faction.objects.first(), role=Role.objects.first(), primary_weapon=Weapon.objects.first(), secondary_weapon=Weapon.objects.first(), server=Server.objects.first())
+        character3 = Character.objects.create(character_name='John Smith', notes='hi', user=roster_user, faction=Faction.objects.first(), role=Role.objects.first(), primary_weapon=Weapon.objects.first(), secondary_weapon=Weapon.objects.first(), server=Server.objects.first())
+        # Search for characters by name
+        search_term = 'John'
+        url = f'/characters?search={search_term}'
+        response = self.client.get(url)
+
+        # Assert that the response contains the expected characters
+        expected = CharacterSerializer([character1, character3], many=True).data
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertEqual(expected, response.data)
