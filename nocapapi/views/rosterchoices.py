@@ -4,8 +4,6 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import RosterChoices, Roster, Character
 
-
-
 class RosterChoicesView(ViewSet):
     """Level up game types view"""
 
@@ -33,11 +31,10 @@ class RosterChoicesView(ViewSet):
             roster_id = request.query_params.get('roster', None)
             if roster_id is not None:
                 roster_choices = roster_choices.filter(roster=roster_id)
-            serializer = RostChoicesSerializer(roster_choices, many=True)
+                serializer = RostChoicesSerializer(roster_choices, many=True)
             return Response(serializer.data)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
     def create(self, request):
         """Handle POST operations for roster choices
         Response -- JSON serialized roster choice instance"""
