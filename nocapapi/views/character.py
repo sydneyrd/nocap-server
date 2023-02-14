@@ -80,7 +80,6 @@ class CharacterView(ViewSet):
             character.secondary_weapon = Weapon.objects.get(pk=request.data["secondary_weapon"])
             character.server = Server.objects.get(pk=request.data["server"])
             character.character_name = request.data["character_name"]
-            character.notes = request.data['notes']
             if 'image' in request.data:
 
                 if request.data["image"].startswith('data'):
@@ -91,6 +90,10 @@ class CharacterView(ViewSet):
                     data = None
             else:
                 character.image = None
+            if 'notes' in request.data:
+                character.notes = request.data['notes']
+            else:
+                character.notes = None
             character.save()
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Character.DoesNotExist as ex:
