@@ -91,14 +91,9 @@ class CharacterView(ViewSet):
                     format, imgstr = request.data["image"].split(';base64,')
                     ext = format.split('/')[-1]
                     data = ContentFile(base64.b64decode(imgstr), name=f'{request.data["character_name"]}-{uuid.uuid4()}.{ext}')
-                else:
-                    data = None
-            else:
-                character.image = None
+                    character.image = data
             if 'notes' in request.data:
                 character.notes = request.data['notes']
-            else:
-                character.notes = None
             character.save()
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Character.DoesNotExist as ex:
