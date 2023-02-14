@@ -10,15 +10,17 @@ from rest_framework.authtoken.models import Token
 class UserView(ViewSet):
     """User view"""
     def update(self, request, pk):
-        """handle put for users"""
-        current_user = User.objects.get(pk=request.data['id'])
-        current_user.email = request.data["email"]
-        current_user.first_name = request.data['first_name']
-        current_user.last_name = request.data['last_name']
-        current_user.username = request.data['username']
-        current_user.save()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
-
+        """handle put/patch for users"""
+        try:
+            user = User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            return Response({'message': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+        # Only update the username and email fields
+        user.username = request.data.get('username', user.username)
+        user.email = request.data.get('email', user.email)
+        user.save()
+        serializer = UserSerializer(user)
+        return Response(serializer.data, status=status.HTTP_200_OK)
     def retrieve(self, request, pk):
         """Handle GET requests for single user
         Returns:
@@ -37,4 +39,4 @@ class UserSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = User
-        fields = ('id',  'last_login', 'is_superuser', 'username', 'last_name',  'email', 'is_staff', 'is_active', 'date_joined', 'first_name' )
+        fields = ('id', 'username' )

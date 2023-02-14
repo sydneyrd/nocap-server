@@ -11,6 +11,7 @@ from tests.calculated_roster_tests import CalculatedRosterTests
 from tests.calculated_roster_choice_tests import CalculatedRosterChoicesTests
 from tests.char_link_tests import CharLinkTests
 from tests.roster_choices_tests import RosterChoicesTests
+from tests.roster_user_tests import RosterUserTests
 
 
 class BaseTestCase(TestCase):
@@ -23,8 +24,5 @@ class BaseTestCase(TestCase):
         self.client.credentials(HTTP_AUTHORIZATION=f"Token {token.key}")
 
 
-class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests, RosterChoicesTests):
+class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests, RosterChoicesTests, RosterUserTests):
     pass
-
-
-#should i even have the ability to get and read rosterusers etc?   ask around and then I can implement tests to support whichever direction
