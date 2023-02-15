@@ -24,28 +24,62 @@ class CharacterView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    # def list(self, request):
+    #     """Handle GET requests to get all characters
+    #     Returns:
+    #         Response -- JSON serialized list of characters
+    #     """
+    #     try:
+    #         roster_user = RosterUser.objects.get(user=request.auth.user.id)
+    #         characters = Character.objects.all()
+    #         user_char = request.query_params.get('user', None)
+    #         search_text = request.query_params.get('search', None)
+    #         if search_text is not None:
+    #             characters = Character.objects.filter(
+    #                 Q(character_name__contains=search_text) & Q(user_id=roster_user)
+    #                 )
+    #         if user_char is not None:
+    #             characters = characters.filter(user_id=roster_user)
+    #         serializer = CharacterSerializer(characters, many=True)
+    #         return Response(serializer.data)
+    #     except Character.DoesNotExist as ex:
+    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+    #     except Exception as ex:
+    #         return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
     def list(self, request):
-        """Handle GET requests to get all characters
-        Returns:
-            Response -- JSON serialized list of characters
-        """
         try:
             roster_user = RosterUser.objects.get(user=request.auth.user.id)
             characters = Character.objects.all()
             user_char = request.query_params.get('user', None)
             search_text = request.query_params.get('search', None)
+            role_pk = request.query_params.get('role', None)
+            faction_pk = request.query_params.get('faction', None)
+            primary_weapon_pk = request.query_params.get('primary_weapon', None)
+            secondary_weapon_pk = request.query_params.get('secondary_weapon', None)
+
             if search_text is not None:
-                characters = Character.objects.filter(
+                characters = characters.filter(
                     Q(character_name__contains=search_text) & Q(user_id=roster_user)
-                    )
+                )
             if user_char is not None:
                 characters = characters.filter(user_id=roster_user)
+            if role_pk is not None:
+                characters = characters.filter(role__pk=role_pk)
+            if faction_pk is not None:
+                characters = characters.filter(faction__pk=faction_pk)
+            if primary_weapon_pk is not None:
+                characters = characters.filter(primary_weapon__pk=primary_weapon_pk)
+            if secondary_weapon_pk is not None:
+                characters = characters.filter(secondary_weapon__pk=secondary_weapon_pk)
+
             serializer = CharacterSerializer(characters, many=True)
             return Response(serializer.data)
         except Character.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
     def create(self, request):
         """Handle POST operations for characters"""
         try:
