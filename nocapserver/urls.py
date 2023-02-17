@@ -1,4 +1,4 @@
-
+from django.conf import settings
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 from rest_framework import routers
 from django.conf.urls.static import static
 from nocapapi.views import CharacterView, register_user, login_user, CharLinkView, FactionView, ServerView, WeaponView, RoleView, RosterView, UserView, CalculatedRosterView, CalculatedRosterChoicesView, RosterChoicesView, RosterUserView
-from django.conf import settings
+
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'characters', CharacterView, 'character')
@@ -22,11 +22,12 @@ router.register(r'rosterchoices', RosterChoicesView, 'rosterchoice')
 router.register(r'rosterusers', RosterUserView, 'rosteruser')
 router.register(r'users', UserView, 'user')
 router.register(r'links', CharLinkView, 'links')
+# router.register(r'filters', FilterView, 'filter')
 
 
 urlpatterns = [
     path('register', register_user),
     path('login', login_user),
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

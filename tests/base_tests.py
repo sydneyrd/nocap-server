@@ -12,6 +12,7 @@ from tests.calculated_roster_choice_tests import CalculatedRosterChoicesTests
 from tests.char_link_tests import CharLinkTests
 from tests.roster_choices_tests import RosterChoicesTests
 from tests.roster_user_tests import RosterUserTests
+from tests.filter_tests import FilterTests
 
 
 class BaseTestCase(TestCase):
@@ -23,6 +24,7 @@ class BaseTestCase(TestCase):
         token = Token.objects.get(user=self.rosteruser.user)
         self.client.credentials(HTTP_AUTHORIZATION=f"Token {token.key}")
 
+    # I was never even calling this function, but I'm leaving it here in case I do develop a need for a setup that can be used by all the tests, and I don't want to have to rewrite it.
 
-class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests, RosterChoicesTests, RosterUserTests):
+class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests, RosterChoicesTests, RosterUserTests, FilterTests):
     pass
