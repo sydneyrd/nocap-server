@@ -37,17 +37,14 @@ class CharacterView(ViewSet):
             filters = {}
             if user_char is not None:
                 filters['user_id'] = user_char
-
             if search_text is not None:
                 filters['character_name__icontains'] = search_text
-
             if role_pk is not None:
                 filters['role_id'] = role_pk
             if faction_pk is not None:
                 filters['faction_id'] = faction_pk
             if primary_weapon_pk is not None:
                 filters['primary_weapon_id'] = primary_weapon_pk
-
             if secondary_weapon_pk is not None:
                 filters['secondary_weapon_id'] = secondary_weapon_pk
             try:
