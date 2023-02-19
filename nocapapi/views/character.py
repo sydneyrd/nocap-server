@@ -34,6 +34,7 @@ class CharacterView(ViewSet):
             faction_pk = request.query_params.get('faction', None)
             primary_weapon_pk = request.query_params.get('primary_weapon', None)
             secondary_weapon_pk = request.query_params.get('secondary_weapon', None)
+            server_pk = request.query_params.get('server', None)
             filters = {}
             if user_char is not None:
                 filters['user_id'] = user_char
@@ -47,6 +48,8 @@ class CharacterView(ViewSet):
                 filters['primary_weapon_id'] = primary_weapon_pk
             if secondary_weapon_pk is not None:
                 filters['secondary_weapon_id'] = secondary_weapon_pk
+            if server_pk is not None:
+                filters['server_id'] = server_pk
             try:
                 characters = Character.objects.filter(Q(**filters))
                 serializer = CharacterSerializer(characters, many=True)
