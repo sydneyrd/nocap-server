@@ -13,17 +13,16 @@ class CharLinkView(ViewSet):
         Returns:
             Response -- JSON serialized list of char_links
         """
+        char_links = CharLink.objects.all()
+        character = request.query_params.get('character', None)
         try:
-            char_links = CharLink.objects.all()
-            character = request.query_params.get('character', None)
-            char_links = char_links.filter(character=character)
-            if len(char_links) != 0:
+            
+            if character is not None:
+                char_links = char_links.filter(character=character)
                 serializer = CharLinkSerializer(char_links, many=True)
                 return Response(serializer.data)
             else:
-                return Response({'message': 'character not found'}, status=status.HTTP_404_NOT_FOUND)
-        except character.DoesNotExist as ex:
-            return Response({'message': "failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                return Response({'message': "failed"}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

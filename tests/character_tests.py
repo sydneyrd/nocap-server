@@ -1,6 +1,6 @@
 from rest_framework import status
 from rest_framework.test import APITestCase
-from nocapapi.models import Character, Server, Role, Faction, Weapon
+from nocapapi.models import Character, Server, Role, Faction, Weapon, RosterUser
 from nocapapi.views.character import CharacterSerializer
 
 class CharacterTests(APITestCase):
