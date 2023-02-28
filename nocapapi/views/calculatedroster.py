@@ -34,9 +34,9 @@ class CalculatedRosterView(ViewSet):
     def create(self, request):
         """Handle POST operations for calculated rosters"""
         user = RosterUser.objects.get(user_id=request.auth.user)
-        if 'roster' in request.data:
+        try:
             roster = Roster.objects.get(pk=request.data['roster'])
-        else: 
+        except: 
             roster = None
         if 'rosterName' in request.data:
             name = request.data['rosterName']
