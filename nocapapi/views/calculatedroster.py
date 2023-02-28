@@ -38,9 +38,9 @@ class CalculatedRosterView(ViewSet):
             roster = Roster.objects.get(pk=request.data['roster'])
         except: 
             roster = None
-        if 'rosterName' in request.data:
+        try:
             name = request.data['rosterName']
-        else:
+        except:
             name = None    
         try:
             new_roster = CalculatedRoster.objects.create(
