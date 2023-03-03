@@ -67,7 +67,6 @@ class CalculatedRosterTests(APITestCase):
             "user": 1
         }
         response = self.client.put(f"/calculatedrosters/4", data, format="json")
-        c.refresh_from_db()
         self.assertEqual(status.HTTP_200_OK, response.status_code)
         self.assertEqual(data['id'], response.data['id'])
         self.assertEqual(data['rosterName'], response.data['rosterName'])
