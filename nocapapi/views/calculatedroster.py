@@ -52,7 +52,23 @@ class CalculatedRosterView(ViewSet):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
+    def update(self, request, pk):
+        """Handle PUT requests for a calculated roster
+        Returns: the serialized calculated roster, and status 200
+        """
+        try:
+            roster = CalculatedRoster.objects.get(pk=pk)
+            if request.data["rosterName"] is not None:
+                roster.rosterName = request.data["rosterName"]
+            if request.data["roster"] is not None:
+                roster.roster = Roster.objects.get(pk=request.data["roster"])
+            roster.save()
+            serializer = CalculatedRosterSerializer(roster)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Roster.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     def destroy(self, request, pk):
         """Handle DELETE requests for a single calculated roster"""
