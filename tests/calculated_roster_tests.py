@@ -1,6 +1,6 @@
 from rest_framework import status
 from rest_framework.test import APITestCase
-from nocapapi.models import CalculatedRoster, Roster
+from nocapapi.models import CalculatedRoster, Roster, RosterUser
 from nocapapi.views.calculatedroster import CalculatedRosterSerializer
 
 class CalculatedRosterTests(APITestCase):
@@ -56,6 +56,23 @@ class CalculatedRosterTests(APITestCase):
         self.assertEqual(status.HTTP_201_CREATED, response.status_code)
         self.assertEqual(data["user"], response.data["user"]["id"])
         self.assertEqual(data["rosterName"], response.data["rosterName"]) 
+    
+    def test_update_calculated_roster(self):
+        """Update calc roster test"""
+        c = CalculatedRoster.objects.get(pk=4)
+        data = {
+            "id": 4,
+            "rosterName": "Test Roster name change",
+            "roster": 24,
+            "user": 1
+        }
+        response = self.client.put(f"/calculatedrosters/4", data, format="json")
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertEqual(data['id'], response.data['id'])
+        self.assertEqual(data['rosterName'], response.data['rosterName'])
+        self.assertEqual(data['roster'], response.data['roster']['id'])
+        self.assertEqual(data['user'], response.data['user']['id'])
+
     def test_delete_calculated_roster(self):
         """Delete calc roster test"""
         calculated_roster = CalculatedRoster.objects.first()
