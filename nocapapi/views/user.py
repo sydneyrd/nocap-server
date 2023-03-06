@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
+from nocapapi.serializers import UserSerializer
 
 
 
@@ -34,9 +35,9 @@ class UserView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
-class UserSerializer(serializers.ModelSerializer):
-    """JSON serializer for users
-    """
-    class Meta:
-        model = User
-        fields = ('id', 'username' )
+# class UserSerializer(serializers.ModelSerializer):
+#     """JSON serializer for users
+#     """
+#     class Meta:
+#         model = User
+#         fields = ('id', 'username' )

@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import Character
 from nocapapi.models import RosterUser, Weapon, Role, Faction, Server
+from nocapapi.serializers import CharacterSerializer, RosterUserSerializer, WeaponSerializer, RoleSerializer, FactionSerializer, ServerSerializer
 import uuid
 import base64
 from django.core.files.base import ContentFile
@@ -123,10 +124,3 @@ class CharacterView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-class CharacterSerializer(serializers.ModelSerializer):
-    """JSON serializer for characters
-    """
-    class Meta:
-        model = Character
-        fields = ('id', 'role', 'faction', 'primary_weapon', 'secondary_weapon', 'server',  'character_name', 'user', 'notes', 'image' )
