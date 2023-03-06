@@ -2,7 +2,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
 from nocapapi.models import CalculatedRoster, RosterUser, Roster, CalculatedRosterChoices
-from nocapapi.serializers import CalculatedRosterTotalsSerializer, CalculatedRosterSerializer
+from nocapapi.serializers import  CalculatedRosterSerializer
 
 
 class CalculatedRosterView(ViewSet):
@@ -10,7 +10,7 @@ class CalculatedRosterView(ViewSet):
     def retrieve(self, request, pk):
         try:
             calculated_roster = CalculatedRoster.objects.get(pk=pk)
-            serializer = CalculatedRosterTotalsSerializer(calculated_roster)
+            serializer = CalculatedRosterSerializer(calculated_roster)
             return Response(serializer.data)
         except CalculatedRoster.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)

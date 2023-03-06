@@ -1,7 +1,7 @@
 from  .character_filter import  CharacterSerializer, CharacterFilterSerializer
 from .roster import RosterSerializer
 from .user import RosterUserSerializer, UserSerializer
-from .calculated_roster import CalculatedRosterSerializer, CalculatedRosterTotalsSerializer
+from .calculated_roster import CalculatedRosterSerializer
 from .character import CharacterSerializer
 from .calculated_roster_choice import CalcRostChoicesSerializer
 from .weapon import WeaponSerializer
