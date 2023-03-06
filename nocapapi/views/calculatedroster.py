@@ -3,6 +3,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import CalculatedRoster, RosterUser, Roster, CalculatedRosterChoices
+from nocapapi.serializers import RosterSerializer, RosterUserSerializer
 from django.db.models import Sum, Aggregate
 
 
@@ -85,8 +86,9 @@ class CalculatedRosterView(ViewSet):
 
 class CalculatedRosterSerializer(serializers.ModelSerializer):
     """JSON serializer for calculated rosters"""
-
+    roster = RosterSerializer(many=False)
+    user = RosterUserSerializer(many=False)
     class Meta:
         model = CalculatedRoster
         fields = ('id', 'user', 'rosterName', 'roster', 'total_damage', 'total_healing', 'total_deaths', 'total_kills', )
-        depth = 1
+
