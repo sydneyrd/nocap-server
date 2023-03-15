@@ -69,11 +69,11 @@ class CharacterView(ViewSet):
             new_secondary_weapon = Weapon.objects.get(pk=request.data['secondary_weapon'])
             new_server = Server.objects.get(pk=request.data['server'])
             new_faction = Faction.objects.get(pk=request.data['faction'])
-            if 'image' in request.data:
+            try:
                 format, img_str = request.data["image"].split(';base64,')
                 ext = format.split('/')[-1]
                 data = ContentFile(base64.b64decode(img_str), name=f'{request.data["character_name"]}-{uuid.uuid4()}.{ext}')
-            else:
+            except:
                 data = None
             character = Character.objects.create(
                 role=new_role,
