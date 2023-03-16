@@ -11,3 +11,7 @@ class CalculatedRosterChoices(models.Model):
     deaths = models.IntegerField()
     assists = models.IntegerField()
     group = models.IntegerField(null=True)
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['character', 'calculated_roster'], name='unique_character_calculated_roster')
+        ]

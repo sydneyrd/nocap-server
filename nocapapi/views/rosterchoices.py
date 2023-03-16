@@ -61,12 +61,3 @@ class RosterChoicesView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
-
-# class RostChoicesSerializer(serializers.ModelSerializer):
-#     """JSON serializer for roster choices serializer
-#     """
-#     class Meta:
-#         model = RosterChoices
-#         fields = ('id', 'character', 'roster')
-#         depth = 1
