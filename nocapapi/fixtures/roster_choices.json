@@ -465,14 +465,6 @@
     },
     {
         "model": "nocapapi.rosterchoices",
-        "pk": 123,
-        "fields": {
-            "roster": 6,
-            "character": 53
-        }
-    },
-    {
-        "model": "nocapapi.rosterchoices",
         "pk": 126,
         "fields": {
             "roster": 6,
@@ -581,14 +573,6 @@
         "fields": {
             "roster": 21,
             "character": 62
-        }
-    },
-    {
-        "model": "nocapapi.rosterchoices",
-        "pk": 141,
-        "fields": {
-            "roster": 21,
-            "character": 36
         }
     },
     {
@@ -825,26 +809,10 @@
     },
     {
         "model": "nocapapi.rosterchoices",
-        "pk": 171,
-        "fields": {
-            "roster": 21,
-            "character": 63
-        }
-    },
-    {
-        "model": "nocapapi.rosterchoices",
         "pk": 172,
         "fields": {
             "roster": 21,
             "character": 13
-        }
-    },
-    {
-        "model": "nocapapi.rosterchoices",
-        "pk": 173,
-        "fields": {
-            "roster": 21,
-            "character": 62
         }
     },
     {
@@ -861,14 +829,6 @@
         "fields": {
             "roster": 21,
             "character": 36
-        }
-    },
-    {
-        "model": "nocapapi.rosterchoices",
-        "pk": 176,
-        "fields": {
-            "roster": 21,
-            "character": 73
         }
     },
     {
@@ -1245,14 +1205,6 @@
         "fields": {
             "roster": 24,
             "character": 91
-        }
-    },
-    {
-        "model": "nocapapi.rosterchoices",
-        "pk": 229,
-        "fields": {
-            "roster": 24,
-            "character": 99
         }
     },
     {
@@ -1738,22 +1690,6 @@
     {
         "model": "nocapapi.rosterchoices",
         "pk": 295,
-        "fields": {
-            "roster": 27,
-            "character": 35
-        }
-    },
-    {
-        "model": "nocapapi.rosterchoices",
-        "pk": 297,
-        "fields": {
-            "roster": 27,
-            "character": 85
-        }
-    },
-    {
-        "model": "nocapapi.rosterchoices",
-        "pk": 298,
         "fields": {
             "roster": 27,
             "character": 35
