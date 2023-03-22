@@ -27,7 +27,7 @@ class CharacterView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def list(self, request):
         try:
-            roster_user = RosterUser.objects.get(user=request.auth.user.id)
+            roster_user = RosterUser.objects.get(user=request.auth.user)
             characters = Character.objects.all()
             user_char = request.query_params.get('user', None)
             search_text = request.query_params.get('search_text', None)
@@ -38,7 +38,7 @@ class CharacterView(ViewSet):
             server_pk = request.query_params.get('server', None)
             filters = {}
             if user_char is not None:
-                filters['user_id'] = user_char
+                filters['user_id'] = roster_user
             if search_text is not None:
                 filters['character_name__icontains'] = search_text
             if role_pk is not None:
