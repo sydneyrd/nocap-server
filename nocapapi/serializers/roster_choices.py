@@ -11,5 +11,5 @@ class RostChoicesSerializer(serializers.ModelSerializer):
     roster = RosterSerializer(many=False)
     class Meta:
         model = RosterChoices
-        fields = ('id', 'character', 'roster')
+        fields = ('id', 'character', 'roster', 'group')
         # depth = 1

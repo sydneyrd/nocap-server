@@ -42,9 +42,14 @@ class RosterChoicesView(ViewSet):
         try:
             roster = Roster.objects.get(pk=request.data['roster'])
             character = Character.objects.get(pk=request.data['character'])
+            if 'group' in request.data:
+                group = request.data['group']
+            else:
+                group = 0
             newrosterchoice = RosterChoices.objects.create(
                 roster=roster,
-                character=character
+                character=character,
+                group=group
             )
             serializer = RostChoicesSerializer(newrosterchoice)
             return Response(serializer.data)
