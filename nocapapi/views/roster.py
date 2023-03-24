@@ -24,12 +24,11 @@ class RosterView(ViewSet):
     Returns:
         Response -- JSON serialized list of rosters
     """
+        user= RosterUser.objects.get(user=request.auth.user)
         try:
-            roster = Roster.objects.all()
-            str_user = request.query_params.get('user', None)
-            roster_user = RosterUser.objects.get(pk=str_user)
+            roster_user = request.query_params.get('user', None)
             if roster_user is not None:
-                roster = roster.filter(user=roster_user)
+                roster = Roster.objects.filter(user=user)
                 serializer = RosterSerializer(roster, many=True)
                 return Response(serializer.data, status=status.HTTP_200_OK)
         except Roster.DoesNotExist as ex:
@@ -78,9 +77,3 @@ class RosterView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-# class RosterSerializer(serializers.ModelSerializer):
-#     """JSON serializer for  rosters
-#     """
-#     class Meta:
-#         model = Roster
-#         fields = ('id', 'user', 'name' )

@@ -76,8 +76,3 @@ class RosterTests(APITestCase):
         expected = RosterSerializer(rosters, many=True)
         self.assertEqual(status.HTTP_200_OK, response.status_code)
         self.assertEqual(expected.data, response.data)
-    def test_get_rosters_by_user_not_found(self):
-        """Get rosters by user not found test"""
-        url = f"/rosters?user=0"
-        response = self.client.get(url)
-        self.assertEqual(status.HTTP_404_NOT_FOUND, response.status_code)

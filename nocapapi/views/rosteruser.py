@@ -34,16 +34,3 @@ class RosterUserView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
-# class UserSerializer(serializers.ModelSerializer):
-#     """JSON serializer for users
-#     """
-#     class Meta:
-#         model = User
-#         fields = ('username', 'email')
-# class RosterUserSerializer(serializers.ModelSerializer):
-#     """JSON serializer for roster users
-#     """
-#     user = UserSerializer(many=False)
-#     class Meta:
-#         model = RosterUser
-#         fields = ('id', 'user' )
