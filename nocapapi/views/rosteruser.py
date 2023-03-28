@@ -15,7 +15,7 @@ class RosterUserView(ViewSet):
         Returns:
             Response -- JSON serialized roster user"""
         try:
-            roster_user = RosterUser.objects.get(pk=pk)
+            roster_user = RosterUser.objects.get(pk=request.auth.user.id)
             serializer = RosterUserSerializer(roster_user)
             return Response(serializer.data)
         except RosterUser.DoesNotExist as ex:

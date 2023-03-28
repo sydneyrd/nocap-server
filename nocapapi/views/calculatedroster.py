@@ -22,9 +22,9 @@ class CalculatedRosterView(ViewSet):
         Returns:
             Response -- JSON serialized list of calculated rosters
         """
-        roster_user = RosterUser.objects.get(user=request.auth.user)
+        roster_user = RosterUser.objects.get(user=request.auth.user.id)
         calculated_roster = CalculatedRoster.objects.all()
-        user_param = request.query_params.get('user', None)
+        user_param = request.query_params.get('user_param', None)
         if user_param is not None:
             calculated_roster = calculated_roster.filter(user=roster_user)
         serializer = CalculatedRosterSerializer(calculated_roster, many=True)

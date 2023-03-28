@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import Character
 from nocapapi.models import RosterUser, Weapon, Role, Faction, Server
-from nocapapi.serializers import CharacterSerializer, RosterUserSerializer, WeaponSerializer, RoleSerializer, FactionSerializer, ServerSerializer
+from nocapapi.serializers import CharacterSerializer, CharacterReadOnlySerializer, RosterUserSerializer, WeaponSerializer, RoleSerializer, FactionSerializer, ServerSerializer
 import uuid
 import base64
 from django.core.files.base import ContentFile
@@ -18,8 +18,13 @@ class CharacterView(ViewSet):
         Returns:
             Response -- JSON serialized character"""
         try:
+            view = request.query_params.get('view', None)
+            if view == 'read_only':
+                character = Character.objects.get(pk=pk)
+                serializer = CharacterReadOnlySerializer(character)
             character = Character.objects.get(pk=pk)
             serializer = CharacterSerializer(character)
+
             return Response(serializer.data)
         except Character.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
