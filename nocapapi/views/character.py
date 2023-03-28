@@ -22,8 +22,9 @@ class CharacterView(ViewSet):
             if view == 'read_only':
                 character = Character.objects.get(pk=pk)
                 serializer = CharacterReadOnlySerializer(character)
-            character = Character.objects.get(pk=pk)
-            serializer = CharacterSerializer(character)
+            else:
+                character = Character.objects.get(pk=pk)
+                serializer = CharacterSerializer(character)
 
             return Response(serializer.data)
         except Character.DoesNotExist as ex:
