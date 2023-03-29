@@ -1,8 +1,8 @@
-from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from rest_framework import serializers, status
+from rest_framework import status
 from nocapapi.models import CalculatedRosterChoices, Character, CalculatedRoster
+from nocapapi.serializers import CharacterSerializer, CalculatedRosterSerializer, CalcRostChoicesSerializer
 
 class CalculatedRosterChoicesView(ViewSet):
     """Calculated Roster Choices/ the characters on rosters view"""
@@ -67,7 +67,6 @@ class CalculatedRosterChoicesView(ViewSet):
         Returns:
             Response -- object with updated values, with 200 status code
         """
-        #does not allow for changing characters right now, need to be added
         try:
             calculated_roster_choice = CalculatedRosterChoices.objects.get(pk=pk)
             calculated_roster_choice.damage = request.data['damage']
@@ -97,32 +96,3 @@ class CalculatedRosterChoicesView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-class CalculatedRosterSerializer(serializers.ModelSerializer):
-    """JSON serializer for calculated rosters
-    """
-    class Meta:
-        model = CalculatedRoster
-        fields = ('id', 'rosterName', 'roster' )
-class CharacterSerializer(serializers.ModelSerializer):
-    """JSON serializer for characters
-    """
-    class Meta:
-        model = Character
-        fields = ('id',
-        "character_name",
-        "notes",
-        "image",
-        "role",
-        "faction",
-        "primary_weapon",
-        "secondary_weapon",
-        "server",
-        "user")
-class CalcRostChoicesSerializer(serializers.ModelSerializer):
-    """JSON serializer for calcrosterchoices 
-    """
-    calculated_roster = CalculatedRosterSerializer(many=False)
-    character = CharacterSerializer(many=False)
-    class Meta:
-        model = CalculatedRosterChoices
-        fields = ('id', 'character', 'calculated_roster', 'damage', 'healing', 'kills', 'deaths', 'assists', 'group'  )

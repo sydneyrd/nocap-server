@@ -1,7 +1,7 @@
 from rest_framework import status
 from rest_framework.test import APITestCase
 from nocapapi.models import Character, Server, Role, Faction, Weapon, RosterUser
-from nocapapi.views.character import CharacterSerializer
+from nocapapi.views.character import CharacterSerializer, CharacterReadOnlySerializer
 
 class CharacterTests(APITestCase):
     def test_create_character(self):
@@ -71,3 +71,11 @@ class CharacterTests(APITestCase):
         response = self.client.delete(url)
         self.assertEqual(status.HTTP_204_NO_CONTENT, response.status_code)
         self.assertFalse(Character.objects.filter(pk=character.pk).exists())
+    def test_get_read_only_character(self):
+        """Get read only character test"""
+        character = Character.objects.first()
+        url = f"/characters/{character.pk}?view=read_only"
+        response = self.client.get(url)
+        expected = CharacterReadOnlySerializer(character)
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertEqual(expected.data, response.data)

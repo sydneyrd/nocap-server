@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import Character, CalculatedRoster
 from nocapapi.models.charlink import CharLink
+from nocapapi.serializers.charlink import CharLinkSerializer
 
 class CharLinkView(ViewSet):
     """character links view"""
@@ -58,9 +59,9 @@ class CharLinkView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-class CharLinkSerializer(serializers.ModelSerializer):
-    """JSON serializer for character links
-    """
-    class Meta:
-        model = CharLink
-        fields = ('id', 'character', 'calculated_roster', 'link')
+# class CharLinkSerializer(serializers.ModelSerializer):
+#     """JSON serializer for character links
+#     """
+#     class Meta:
+#         model = CharLink
+#         fields = ('id', 'character', 'calculated_roster', 'link')

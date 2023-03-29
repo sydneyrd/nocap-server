@@ -1,10 +1,8 @@
-from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from rest_framework import serializers, status
+from rest_framework import status
 from nocapapi.models import CalculatedRoster, RosterUser, Roster, CalculatedRosterChoices
-from django.db.models import Sum, Aggregate
-
+from nocapapi.serializers import  CalculatedRosterSerializer
 
 
 class CalculatedRosterView(ViewSet):
@@ -24,10 +22,11 @@ class CalculatedRosterView(ViewSet):
         Returns:
             Response -- JSON serialized list of calculated rosters
         """
+        roster_user = RosterUser.objects.get(user=request.auth.user.id)
         calculated_roster = CalculatedRoster.objects.all()
-        user_req = request.query_params.get('user', None)
-        if user_req is not None:
-            calculated_roster = calculated_roster.filter(user=user_req)
+        user_param = request.query_params.get('user_param', None)
+        if user_param is not None:
+            calculated_roster = calculated_roster.filter(user=roster_user)
         serializer = CalculatedRosterSerializer(calculated_roster, many=True)
         return Response(serializer.data)
 
@@ -81,12 +80,3 @@ class CalculatedRosterView(ViewSet):
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
-
-class CalculatedRosterSerializer(serializers.ModelSerializer):
-    """JSON serializer for calculated rosters"""
-
-    class Meta:
-        model = CalculatedRoster
-        fields = ('id', 'user', 'rosterName', 'roster', 'total_damage', 'total_healing', 'total_deaths', 'total_kills', )
-        depth = 1

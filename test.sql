@@ -1,17 +1,13 @@
-SELECT SUM(damage) AS army_damage, SUM(healing) AS army_healing, 
-SUM(kills) AS army_kills, 
-SUM(deaths) AS army_deaths 
-FROM nocapapi_calculatedrosterchoices
+SELECT * FROM nocapapi_rosterchoices
+WHERE id NOT IN (
+    SELECT MIN(id) FROM 
+    nocapapi_rosterchoices
+    GROUP BY roster_id, character_id
+);
 
-Where nocapapi_calculatedrosterchoices.calculated_roster_id = 33
-;
 
+SELECT * FROM nocapapi_rosterchoices
+WHERE character_id IN (53, 62, 36, 99); 
 
-SELECT SUM(nocapapi_calculatedrosterchoices.damage) AS army_damage,
-       SUM(nocapapi_calculatedrosterchoices.healing) AS army_healing,
-       SUM(nocapapi_calculatedrosterchoices.kills) AS army_kills,
-       SUM(nocapapi_calculatedrosterchoices.deaths) AS army_deaths
-FROM nocapapi_calculatedroster
-JOIN nocapapi_calculatedrosterchoices
-  ON nocapapi_calculatedroster.id = nocapapi_calculatedrosterchoices.calculated_roster_id
-WHERE nocapapi_calculatedroster.id = 33;
+DELETE FROM nocapapi_rosterchoices
+WHERE id=261

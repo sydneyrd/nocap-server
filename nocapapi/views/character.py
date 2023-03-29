@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import Character
 from nocapapi.models import RosterUser, Weapon, Role, Faction, Server
+from nocapapi.serializers import CharacterSerializer, CharacterReadOnlySerializer, RosterUserSerializer, WeaponSerializer, RoleSerializer, FactionSerializer, ServerSerializer
 import uuid
 import base64
 from django.core.files.base import ContentFile
@@ -17,8 +18,14 @@ class CharacterView(ViewSet):
         Returns:
             Response -- JSON serialized character"""
         try:
-            character = Character.objects.get(pk=pk)
-            serializer = CharacterSerializer(character)
+            view = request.query_params.get('view', None)
+            if view == 'read_only':
+                character = Character.objects.get(pk=pk)
+                serializer = CharacterReadOnlySerializer(character)
+            else:
+                character = Character.objects.get(pk=pk)
+                serializer = CharacterSerializer(character)
+
             return Response(serializer.data)
         except Character.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
@@ -26,7 +33,7 @@ class CharacterView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def list(self, request):
         try:
-            roster_user = RosterUser.objects.get(user=request.auth.user.id)
+            roster_user = RosterUser.objects.get(user=request.auth.user)
             characters = Character.objects.all()
             user_char = request.query_params.get('user', None)
             search_text = request.query_params.get('search_text', None)
@@ -37,7 +44,7 @@ class CharacterView(ViewSet):
             server_pk = request.query_params.get('server', None)
             filters = {}
             if user_char is not None:
-                filters['user_id'] = user_char
+                filters['user_id'] = roster_user
             if search_text is not None:
                 filters['character_name__icontains'] = search_text
             if role_pk is not None:
@@ -68,11 +75,11 @@ class CharacterView(ViewSet):
             new_secondary_weapon = Weapon.objects.get(pk=request.data['secondary_weapon'])
             new_server = Server.objects.get(pk=request.data['server'])
             new_faction = Faction.objects.get(pk=request.data['faction'])
-            if 'image' in request.data:
+            try:
                 format, img_str = request.data["image"].split(';base64,')
                 ext = format.split('/')[-1]
                 data = ContentFile(base64.b64decode(img_str), name=f'{request.data["character_name"]}-{uuid.uuid4()}.{ext}')
-            else:
+            except:
                 data = None
             character = Character.objects.create(
                 role=new_role,
@@ -123,10 +130,3 @@ class CharacterView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-class CharacterSerializer(serializers.ModelSerializer):
-    """JSON serializer for characters
-    """
-    class Meta:
-        model = Character
-        fields = ('id', 'role', 'faction', 'primary_weapon', 'secondary_weapon', 'server',  'character_name', 'user', 'notes', 'image' )

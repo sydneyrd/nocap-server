@@ -1,8 +1,9 @@
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from rest_framework import serializers, status
+from rest_framework import status
 from nocapapi.models import Server
+from nocapapi.serializers import ServerSerializer
 
 
 
@@ -37,9 +38,9 @@ class ServerView(ViewSet):
 
 
 
-class ServerSerializer(serializers.ModelSerializer):
-    """JSON serializer for servers
-    """
-    class Meta:
-        model = Server
-        fields = ('id', 'name' )
+# class ServerSerializer(serializers.ModelSerializer):
+#     """JSON serializer for servers
+#     """
+#     class Meta:
+#         model = Server
+#         fields = ('id', 'name' )

@@ -3,9 +3,10 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from nocapapi.models import RosterChoices, Roster, Character
+from nocapapi.serializers import RostChoicesSerializer
 
 class RosterChoicesView(ViewSet):
-    """Level up game types view"""
+    """roster choices viewset for nocapapi"""
 
     def retrieve(self, request, pk):
         """Handle GET requests for single roster choice
@@ -41,9 +42,14 @@ class RosterChoicesView(ViewSet):
         try:
             roster = Roster.objects.get(pk=request.data['roster'])
             character = Character.objects.get(pk=request.data['character'])
+            if 'group' in request.data:
+                group = request.data['group']
+            else:
+                group = 0
             newrosterchoice = RosterChoices.objects.create(
                 roster=roster,
-                character=character
+                character=character,
+                group=group
             )
             serializer = RostChoicesSerializer(newrosterchoice)
             return Response(serializer.data)
@@ -60,12 +66,3 @@ class RosterChoicesView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
-
-class RostChoicesSerializer(serializers.ModelSerializer):
-    """JSON serializer for roster choices serializer
-    """
-    class Meta:
-        model = RosterChoices
-        fields = ('id', 'character', 'roster')
-        depth = 1

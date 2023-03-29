@@ -1,11 +1,12 @@
 from django.db import models
 from django.db.models import Sum, Aggregate
+from nocapapi.models import RosterUser, Roster
 
 
 class CalculatedRoster(models.Model):
-    user = models.ForeignKey("RosterUser", on_delete=models.CASCADE)
+    user = models.ForeignKey(RosterUser, on_delete=models.CASCADE)
     rosterName = models.CharField(max_length=800, null=True)
-    roster = models.ForeignKey("Roster", on_delete=models.SET_NULL, null=True, related_name="calculated")
+    roster = models.ForeignKey(Roster, on_delete=models.SET_NULL, null=True, related_name="calculated")
     
     @property
     def total_damage(self):
