@@ -6,7 +6,7 @@ from nocapapi.models import RosterChoices, Roster, Character
 from nocapapi.serializers import RostChoicesSerializer
 
 class RosterChoicesView(ViewSet):
-    """Level up game types view"""
+    """roster choices viewset for nocapapi"""
 
     def retrieve(self, request, pk):
         """Handle GET requests for single roster choice

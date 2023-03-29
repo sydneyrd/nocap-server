@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from nocapapi.models import Character
+from nocapapi.serializers.charlink import CharLinkSerializer
 
 
 class CharacterSerializer(serializers.ModelSerializer):
@@ -27,6 +28,8 @@ class CharacterReadOnlySerializer(serializers.ModelSerializer):
     primary_weapon = serializers.StringRelatedField()
     secondary_weapon = serializers.StringRelatedField()
     server = serializers.StringRelatedField()
+    character_links=CharLinkSerializer(many=True, read_only=True)
+    
 
     class Meta:
         model = Character
@@ -38,5 +41,6 @@ class CharacterReadOnlySerializer(serializers.ModelSerializer):
         "faction",
         "primary_weapon",
         "secondary_weapon",
-        "server")
+        "server",
+        "character_links")
         
