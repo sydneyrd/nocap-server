@@ -1,6 +1,6 @@
 from rest_framework import status
 from rest_framework.test import APITestCase
-from nocapapi.models import CalculatedRoster, Roster, RosterUser
+from nocapapi.models import CalculatedRoster, Roster, Character
 from nocapapi.views.calculatedroster import CalculatedRosterSerializer
 
 class CalculatedRosterTests(APITestCase):
@@ -78,4 +78,12 @@ class CalculatedRosterTests(APITestCase):
         calculated_roster = CalculatedRoster.objects.first()
         response = self.client.delete(f"/calculatedrosters/{calculated_roster.pk}")
         self.assertEqual(status.HTTP_204_NO_CONTENT, response.status_code)
-        self.assertEqual({'message': "deleted"}, response.data)    
+        self.assertEqual({'message': "deleted"}, response.data)  
+    def test_get_calculated_roster_by_character(self):
+        """Get calc roster by character test"""
+        url = f"/calculatedrosters?character={Character.objects.first().pk}"
+        response = self.client.get(url)
+        calculated_rosters = CalculatedRoster.objects.filter(calculatedrosterchoices__character=Character.objects.first().pk)
+        expected = CalculatedRosterSerializer(calculated_rosters, many=True)
+        self.assertEqual(status.HTTP_200_OK, response.status_code)
+        self.assertEqual(expected.data, response.data)  

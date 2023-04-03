@@ -16,6 +16,7 @@ class CharLinkView(ViewSet):
         """
         char_links = CharLink.objects.all()
         character = request.query_params.get('character', None)
+        calculated_roster = request.query_params.get('calculated_roster', None)
         try:
             
             if character is not None:
@@ -45,8 +46,8 @@ class CharLinkView(ViewSet):
                 )
             serializer = CharLinkSerializer(new_link)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        except:
-            return Response({'message': "failed"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        except Exception as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     def destroy(self, request, pk):
         """Handle DELETE requests for a single character link"""

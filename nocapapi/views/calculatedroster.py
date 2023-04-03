@@ -25,8 +25,11 @@ class CalculatedRosterView(ViewSet):
         roster_user = RosterUser.objects.get(user=request.auth.user.id)
         calculated_roster = CalculatedRoster.objects.all()
         user_param = request.query_params.get('user_param', None)
+        character = request.query_params.get('character', None)
         if user_param is not None:
             calculated_roster = calculated_roster.filter(user=roster_user)
+        if character is not None:
+            calculated_roster = calculated_roster.filter(calculatedrosterchoices__character=character)
         serializer = CalculatedRosterSerializer(calculated_roster, many=True)
         return Response(serializer.data)
 
