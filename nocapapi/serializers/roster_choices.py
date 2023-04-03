@@ -12,4 +12,3 @@ class RostChoicesSerializer(serializers.ModelSerializer):
     class Meta:
         model = RosterChoices
         fields = ('id', 'character', 'roster', 'group')
-        # depth = 1
