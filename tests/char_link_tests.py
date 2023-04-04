@@ -75,6 +75,9 @@ class CharLinkTests(APITestCase):
         response = self.client.get(url)
         self.assertEqual(status.HTTP_200_OK, response.status_code)
         self.assertEqual([], response.data)
+
+    
+
     # def test_no_matching_character_fail(self):
     #     """Get character links with no matching character test"""
     #     url = "/links?character=999999"

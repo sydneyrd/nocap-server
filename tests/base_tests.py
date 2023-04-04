@@ -13,6 +13,7 @@ from tests.char_link_tests import CharLinkTests
 from tests.roster_choices_tests import RosterChoicesTests
 from tests.roster_user_tests import RosterUserTests
 from tests.filter_tests import FilterTests
+from tests.public_tests import PublicTests
 import collections
 
 
@@ -53,5 +54,5 @@ class BaseTestCase(TestCase):
 
     # I was never even calling this function, but I'm leaving it here in case I do develop a need for a setup that can be used by all the tests, and I don't want to have to rewrite it.
 
-class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests, RosterChoicesTests, RosterUserTests, FilterTests):
+class MyTestCase(BaseTestCase, CharacterTests, WeaponTests, RoleTests, ServerTests, FactionTests, RosterTests, CalculatedRosterTests, CalculatedRosterChoicesTests, CharLinkTests, RosterChoicesTests, RosterUserTests, FilterTests, PublicTests):
     pass

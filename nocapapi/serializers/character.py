@@ -6,6 +6,7 @@ from nocapapi.serializers.charlink import CharLinkSerializer
 class CharacterSerializer(serializers.ModelSerializer):
     """JSON serializer for characters
     """
+    character_links=CharLinkSerializer(many=True, read_only=True)
     class Meta:
         model = Character
         fields = ('id',
@@ -17,7 +18,8 @@ class CharacterSerializer(serializers.ModelSerializer):
         "primary_weapon",
         "secondary_weapon",
         "server",
-        "user")
+        "user",
+        "character_links")
 
 class CharacterReadOnlySerializer(serializers.ModelSerializer):
     """JSON serializer for characters

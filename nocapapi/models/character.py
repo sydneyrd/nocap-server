@@ -12,3 +12,4 @@ class Character(models.Model):
     user = models.ForeignKey(RosterUser, on_delete=models.CASCADE)
     notes = models.CharField("notes", max_length=500, null=True)
     image = models.ImageField(upload_to='characterimages', height_field=None, width_field=None, max_length=None, null=True)
+    

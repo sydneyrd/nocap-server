@@ -14,7 +14,8 @@
         "fields": {
             "roster": 25,
             "user": 1,
-            "rosterName": "Not YUH Swamp VS Warslots for Sale (W)"
+            "rosterName": "Not YUH Swamp VS Warslots for Sale (W)",
+            "is_public": true
         }
     }
 ]
