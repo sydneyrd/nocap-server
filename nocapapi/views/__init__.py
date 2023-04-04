@@ -11,5 +11,5 @@ from .rosterchoices import RosterChoicesView
 from .rosteruser import RosterUserView
 from .user import UserView
 from .charlink import CharLinkView
-from .public_roster import public_calculated_rosters
+from .public_roster import public_calculated_rosters, public_calculated_roster_choices
 

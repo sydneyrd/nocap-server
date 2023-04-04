@@ -5,7 +5,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from rest_framework import routers
 from django.conf.urls.static import static
-from nocapapi.views import CharacterView, register_user, login_user, CharLinkView, FactionView, ServerView, WeaponView, RoleView, RosterView, UserView, CalculatedRosterView, CalculatedRosterChoicesView, RosterChoicesView, RosterUserView, public_calculated_rosters
+from nocapapi.views import CharacterView, register_user, login_user, CharLinkView, FactionView, ServerView, WeaponView, RoleView, RosterView, UserView, CalculatedRosterView, CalculatedRosterChoicesView, RosterChoicesView, RosterUserView, public_calculated_rosters, public_calculated_roster_choices
 
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -32,4 +32,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
      path('public-rosters', public_calculated_rosters, name='public-rosters'),
+     path('public-roster-choices', public_calculated_roster_choices, name='public-roster-choices'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

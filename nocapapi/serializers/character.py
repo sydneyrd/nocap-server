@@ -18,7 +18,6 @@ class CharacterSerializer(serializers.ModelSerializer):
         "primary_weapon",
         "secondary_weapon",
         "server",
-        "user",
         "character_links")
 
 class CharacterReadOnlySerializer(serializers.ModelSerializer):
