@@ -7,7 +7,7 @@ from nocapapi.serializers.charlink import CharLinkSerializer
 class CalcRostChoicesSerializer(serializers.ModelSerializer):
     """JSON serializer for calcrosterchoices 
     """
-    calculated_roster = CalculatedRosterSerializer(many=False)
+    # calculated_roster = CalculatedRosterSerializer(many=False)
     character = CharacterSerializer(many=False)
     char_links = CharLinkSerializer(many=True, read_only=True, source='character.character_links')
 
@@ -17,4 +17,4 @@ class CalcRostChoicesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CalculatedRosterChoices
-        fields = ('id', 'character', 'calculated_roster', 'damage', 'healing', 'kills', 'deaths', 'assists', 'group', 'char_links' )
+        fields = ('id', 'character',  'damage', 'healing', 'kills', 'deaths', 'assists', 'group', 'char_links' )
