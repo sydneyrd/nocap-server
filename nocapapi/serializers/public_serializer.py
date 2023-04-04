@@ -12,7 +12,7 @@ class PublicRosterListSerializer(serializers.ModelSerializer):
     """JSON serializer for calculated rosters"""
     class Meta:
         model = CalculatedRoster
-        fields = ('rosterName', 'total_damage', 'total_healing', 'total_deaths', 'total_kills', 'is_public', 'id')
+        fields = ('rosterName', 'total_damage', 'total_healing', 'total_deaths', 'total_kills', 'is_public', 'id', 'created_at')
 
 
     
