@@ -6,5 +6,5 @@ from nocapapi.models import RosterUser
 @api_view(['GET'])
 def generate_shared_character_token(request):
     rosteruser = RosterUser.objects.get(user_id=request.auth.user)
-    shared_character_token = SharedCharacterToken.objects.create(rosteruser=rosteruser)
+    shared_character_token = SharedCharacterToken.objects.create(user=rosteruser)
     return Response({'token': str(shared_character_token.token)})
