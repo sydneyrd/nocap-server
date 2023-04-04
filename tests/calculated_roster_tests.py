@@ -115,3 +115,4 @@ class CalculatedRosterTests(APITestCase):
         self.assertEqual(len(response.data["char_links"]), 1)
         self.assertEqual(response.data["char_links"][0]["id"], link.id)
         self.assertEqual(response.data["char_links"][0]["link"], link.link)
+# create a test for only getting public rosters
