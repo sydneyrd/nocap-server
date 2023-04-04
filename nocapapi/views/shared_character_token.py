@@ -1,0 +1,10 @@
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from nocapapi.models import SharedCharacterToken
+from nocapapi.models import RosterUser
+
+@api_view(['GET'])
+def generate_shared_character_token(request):
+    rosteruser = RosterUser.objects.get(user_id=request.auth.user)
+    shared_character_token = SharedCharacterToken.objects.create(rosteruser=rosteruser)
+    return Response({'token': str(shared_character_token.token)})
