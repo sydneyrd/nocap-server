@@ -8,16 +8,24 @@ from nocapapi.serializers import PublicRosterListSerializer, PublicCalcRostChoic
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def public_calculated_rosters(request):
-    calculated_roster = CalculatedRoster.objects.filter(is_public=True)
-    
-    serializer = PublicRosterListSerializer(calculated_roster, many=True)
-    return Response(serializer.data)
+    try:
+        calculated_roster = CalculatedRoster.objects.filter(is_public=True)
+        
+        serializer = PublicRosterListSerializer(calculated_roster, many=True)
+        return Response(serializer.data)
+    except Exception as ex:
+        return Response({'error': ex.args[0]})
 
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def public_calculated_roster_choices(request):
-    calculated_roster_choices = CalculatedRosterChoices.objects.filter(calculated_roster=request.query_params.get('calculatedroster', None))
+    try:
+        calculated_roster_choices = CalculatedRosterChoices.objects.filter(calculated_roster=request.query_params.get('calculatedroster', None))
+        
+        serializer = PublicCalcRostChoicesSerializer(calculated_roster_choices, many=True)
+        return Response(serializer.data)
+    except Exception as ex:
+        return Response({'error': ex.args[0]})
     
-    serializer = PublicCalcRostChoicesSerializer(calculated_roster_choices, many=True)
-    return Response(serializer.data)
+        
