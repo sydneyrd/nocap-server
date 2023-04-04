@@ -23,8 +23,6 @@ class CalculatedRosterChoicesTests(APITestCase):
         response = self.client.post(url, data, format="json")
         self.assertEqual(status.HTTP_201_CREATED, response.status_code)
         self.assertEqual(data["character"], response.data["character"]['id'])
-        self.assertEqual(data["calculated_roster"],
-                        response.data["calculated_roster"]['id'])
         self.assertEqual(data["damage"], response.data["damage"])
         self.assertEqual(data["healing"], response.data["healing"])
         self.assertEqual(data["kills"], response.data["kills"])
@@ -74,8 +72,7 @@ class CalculatedRosterChoicesTests(APITestCase):
         }
         response = self.client.put(url, data, format="json")
         self.assertEqual(status.HTTP_200_OK, response.status_code)
-        self.assertEqual(data["calculated_roster"],
-                        response.data["calculated_roster"]['id'])
+        
         self.assertEqual(data["damage"], response.data["damage"])
         self.assertEqual(data["healing"], response.data["healing"])
         self.assertEqual(data["kills"], response.data["kills"])

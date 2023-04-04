@@ -16,4 +16,4 @@ class CalculatedRosterSerializer(serializers.ModelSerializer):
     user = RosterUserSerializer(many=False)
     class Meta:
         model = CalculatedRoster
-        fields = ('id', 'user', 'rosterName', 'roster', 'total_damage', 'total_healing', 'total_deaths', 'total_kills', )
+        fields = ('id', 'user', 'rosterName', 'roster', 'total_damage', 'total_healing', 'total_deaths', 'total_kills', 'is_public' )
