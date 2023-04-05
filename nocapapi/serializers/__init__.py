@@ -11,5 +11,5 @@ from .server import ServerSerializer
 from .faction import FactionSerializer
 from .charlink import CharLinkSerializer
 from .roster_choices import RostChoicesSerializer
-from .public_serializer import PublicRosterListSerializer
+from .public_serializer import PublicRosterListSerializer, PublicCalcRostChoicesSerializer
 

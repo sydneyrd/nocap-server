@@ -8,6 +8,7 @@ class CalculatedRoster(models.Model):
     rosterName = models.CharField(max_length=800, null=True)
     roster = models.ForeignKey(Roster, on_delete=models.SET_NULL, null=True, related_name="calculated")
     is_public = models.BooleanField(default=False, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
     
     @property
     def total_damage(self):
