@@ -1,4 +1,4 @@
-from  .character_filter import  CharacterSerializer, CharacterFilterSerializer
+from  .character_filter import  CharacterSerializer
 from .roster import RosterSerializer
 from .user import RosterUserSerializer, UserSerializer
 from .calculated_roster import CalculatedRosterSerializer

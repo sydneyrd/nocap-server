@@ -47,6 +47,7 @@ class CharacterView(ViewSet):
                 filters['user_id'] = roster_user
             if search_text is not None:
                 filters['character_name__icontains'] = search_text
+                print(filters)
             if role_pk is not None:
                 filters['role_id'] = role_pk
             if faction_pk is not None:
