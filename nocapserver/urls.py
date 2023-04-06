@@ -5,7 +5,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from rest_framework import routers
 from django.conf.urls.static import static
-from nocapapi.views import CharacterView, register_user, login_user, CharLinkView, FactionView, ServerView, WeaponView, RoleView, RosterView, UserView, CalculatedRosterView, CalculatedRosterChoicesView, RosterChoicesView, RosterUserView, public_calculated_rosters, public_calculated_roster_choices, shared_character_create, generate_shared_character_token, public_weapons, public_roles, public_servers, public_factions, public_calculated_roster_detail
+from nocapapi.views import CharacterView, register_user, login_user, CharLinkView, FactionView, ServerView, WeaponView, RoleView, RosterView, UserView, CalculatedRosterView, CalculatedRosterChoicesView, RosterChoicesView, RosterUserView, public_calculated_rosters, public_calculated_roster_choices, shared_character_create, generate_shared_character_token, public_weapons, public_roles, public_servers, public_factions, public_calculated_roster_detail, generate_shared_calculated_roster_token
 
 
 
@@ -37,6 +37,7 @@ urlpatterns = [
     path('public-roster-choices', public_calculated_roster_choices, name='public-roster-choices'),
     path('generate_shared_character_token', generate_shared_character_token, name='generate_shared_character_token'),
     path('shared_character_create/<uuid:token>', shared_character_create, name='shared_character_create'),
+    path('generate_shared_calculated_roster_token', generate_shared_calculated_roster_token, name='generate_shared_calculated_roster_token'),
     path('public/factions', public_factions, name='public_factions'),
     path('public/weapons', public_weapons, name='public_weapons'),
     path('public/servers', public_servers, name='public_servers'),

@@ -10,3 +10,4 @@ from .rosterchoices import RosterChoices
 from .calculatedrosterchoices import CalculatedRosterChoices
 from .charlink import CharLink
 from .sharedcharactertoken import SharedCharacterToken
+from .sharedcalculatedrosterchoicetoken import SharedCalculatedRosterChoiceToken
