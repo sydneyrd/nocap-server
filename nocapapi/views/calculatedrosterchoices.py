@@ -18,24 +18,6 @@ class CalculatedRosterChoicesView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-    # def list(self, request):
-    #     """Handle GET requests to get all calculated roster choices
-    #     Returns:
-    #     Response -- JSON serialized list of calculated roster choices
-    # """
-    #     try:
-    #         calculated_roster_choices = CalculatedRosterChoices.objects.all()
-    #         calculated_roster = request.query_params.get('calculatedroster', None)
-    #         if calculated_roster is not None:
-    #             calculated_roster_choices = calculated_roster_choices.filter(calculated_roster=calculated_roster)
-    #         else:
-    #             return Response({'message': 'No calculated roster provided'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
-    #         serializer = CalcRostChoicesSerializer(calculated_roster_choices, many=True)
-    #         return Response(serializer.data)
-    #     except CalculatedRosterChoices.DoesNotExist as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-    #     except Exception as ex:
-    #         return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def list(self, request):
         """Handle GET requests to get all calculated roster choices
     Returns:

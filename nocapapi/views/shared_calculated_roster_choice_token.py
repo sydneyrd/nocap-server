@@ -4,7 +4,7 @@ from nocapapi.models import SharedCalculatedRosterChoiceToken
 from nocapapi.models import RosterUser, CalculatedRoster
 from rest_framework import status
 
-@api_view(['GET'])
+@api_view(['POST'])
 def generate_shared_calculated_roster_token(request):
     try:  
         rosteruser = RosterUser.objects.get(user_id=request.auth.user)
