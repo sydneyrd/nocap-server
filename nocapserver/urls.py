@@ -5,7 +5,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from rest_framework import routers
 from django.conf.urls.static import static
-from nocapapi.views import CharacterView, register_user, login_user, CharLinkView, FactionView, ServerView, WeaponView, RoleView, RosterView, UserView, CalculatedRosterView, CalculatedRosterChoicesView, RosterChoicesView, RosterUserView, public_calculated_rosters, public_calculated_roster_choices, shared_character_create, generate_shared_character_token, public_weapons, public_roles, public_servers, public_factions, public_calculated_roster_detail, generate_shared_calculated_roster_token,shared_calculated_roster_choice_create
+from nocapapi.views import CharacterView, register_user, login_user, CharLinkView, FactionView, ServerView, WeaponView, RoleView, RosterView, UserView, CalculatedRosterView, CalculatedRosterChoicesView, RosterChoicesView, RosterUserView, public_calculated_rosters, public_calculated_roster_choices, shared_character_create, generate_shared_character_token, public_weapons, public_roles, public_servers, public_factions, public_calculated_roster_detail, generate_shared_calculated_roster_token,shared_calculated_roster_choice_create, password_reset_request, get_csrf_token, password_reset_confirm
 
 
 
@@ -43,5 +43,8 @@ urlpatterns = [
     path('public/weapons', public_weapons, name='public_weapons'),
     path('public/servers', public_servers, name='public_servers'),
     path('public/roles', public_roles, name='public_roles'),
+    path('password-reset-request', password_reset_request, name='password_reset_request'),
+     path('csrf', get_csrf_token, name='get_csrf_token'),
+    path('password-reset-confirm', password_reset_confirm, name='password_reset_confirm'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
