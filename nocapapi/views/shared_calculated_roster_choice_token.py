@@ -14,7 +14,7 @@ def generate_shared_calculated_roster_token(request):
         else:
             
                 if SharedCalculatedRosterChoiceToken.objects.filter(calculated_roster=calculated_roster).exists():
-                    shared_calculated_roster_choice_token = SharedCalculatedRosterChoiceToken.objects.get(user=rosteruser)
+                    shared_calculated_roster_choice_token = SharedCalculatedRosterChoiceToken.objects.get(calculated_roster=calculated_roster)
                     shared_calculated_roster_choice_token.delete()
                 shared_calculated_roster_choice_token = SharedCalculatedRosterChoiceToken.objects.create(user=rosteruser, calculated_roster=calculated_roster)
                 return Response({'token': str(shared_calculated_roster_choice_token.token)})
