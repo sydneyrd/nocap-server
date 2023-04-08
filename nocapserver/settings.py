@@ -26,9 +26,11 @@ JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'dead-game-server.onrender.com',
-]
+# ALLOWED_HOSTS = [
+#     'dead-game-server.onrender.com',
+# ]
+
+ALLOWED_HOSTS = ['127.0.0.1']
 
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_CLASSES': [
@@ -66,43 +68,54 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
-CSRF_TRUSTED_ORIGINS = [
-    'http://dead-game-client:10000',
-    'http://3.134.238.10',
-    'http://3.129.111.220',
-    'http://52.15.118.168',
-    'http://deadgameroster.com',
-    'http://www.deadgameroster.com',
-    'https://dead-game-client.onrender.com',
-    'https://dead-game-client:10000',
-    'https://3.134.238.10',
-    'https://3.129.111.220',
-    'https://52.15.118.168',
-    'https://deadgameroster.com',
-    'https://www.deadgameroster.com',
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'http://dead-game-client:10000',
+#     'http://3.134.238.10',
+#     'http://3.129.111.220',
+#     'http://52.15.118.168',
+#     'http://deadgameroster.com',
+#     'http://www.deadgameroster.com',
+#     'https://dead-game-client.onrender.com',
+#     'https://dead-game-client:10000',
+#     'https://3.134.238.10',
+#     'https://3.129.111.220',
+#     'https://52.15.118.168',
+#     'https://deadgameroster.com',
+#     'https://www.deadgameroster.com',
+# ]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://dead-game-client:10000',
-    'http://3.134.238.10',
-    'http://3.129.111.220',
-    'http://52.15.118.168',
-    'http://deadgameroster.com',
-    'http://www.deadgameroster.com',
-    'https://dead-game-client.onrender.com',
-    'https://dead-game-client:10000',
-    'https://3.134.238.10',
-    'https://3.129.111.220',
-    'https://52.15.118.168',
-    'https://deadgameroster.com',
-    'https://www.deadgameroster.com',
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://dead-game-client:10000',
+#     'http://3.134.238.10',
+#     'http://3.129.111.220',
+#     'http://52.15.118.168',
+#     'http://deadgameroster.com',
+#     'http://www.deadgameroster.com',
+#     'https://dead-game-client.onrender.com',
+#     'https://dead-game-client:10000',
+#     'https://3.134.238.10',
+#     'https://3.129.111.220',
+#     'https://52.15.118.168',
+#     'https://deadgameroster.com',
+#     'https://www.deadgameroster.com',
+# ]
 
 # SESSION_COOKIE_SAMESITE = 'Strict'
 # CSRF_COOKIE_SAMESITE = 'Strict'
 # SESSION_COOKIE_SECURE = False
 # CSRF_COOKIE_SECURE = False
 
+#local testing
+CSRF_TRUSTED_ORIGINS = ['https://localhost:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'https://127.0.0.1:3000'
+                        ]
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = (
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://localhost:3000',
+    'https://127.0.0.1:3000'
+)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -139,10 +152,18 @@ WSGI_APPLICATION = 'nocapserver.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600)
-}
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600)
+# }
 
+
+#for local stuff
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
