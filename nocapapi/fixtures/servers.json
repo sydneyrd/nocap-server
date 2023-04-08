@@ -1,79 +1,171 @@
+
 [
-    {
-        "model": "nocapapi.server",
-        "pk": 1,
-        "fields": {
-            "name": "Maramma"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 2,
-        "fields": {
-            "name": "Castle of Steel"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 3,
-        "fields": {
-            "name": "Orofena"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 4,
-        "fields": {
-            "name": "Orun"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 5,
-        "fields": {
-            "name": "Ohonoo"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 6,
-        "fields": {
-            "name": "Pluto"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 7,
-        "fields": {
-            "name": "Valhalla"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 8,
-        "fields": {
-            "name": "Camelot"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 9,
-        "fields": {
-            "name": "Yggdrasil"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 10,
-        "fields": {
-            "name": "El Dorado"
-        }
-    },
-    {
-        "model": "nocapapi.server",
-        "pk": 11,
-        "fields": {
-            "name": "Lilliput"
-        }
-    }
+{
+"model": "nocapapi.server",
+"pk": 1,
+"fields": {
+"name": "Aaru"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 2,
+"fields": {
+"name": "Abaton"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 3,
+"fields": {
+"name": "Amarah"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 4,
+"fields": {
+"name": "Artorius"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 5,
+"fields": {
+"name": "Artemis"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 6,
+"fields": {
+"name": "Asgard"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 7,
+"fields": {
+"name": "Barri"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 8,
+"fields": {
+"name": "Castle of Steel"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 9,
+"fields": {
+"name": "Cleopatra"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 10,
+"fields": {
+"name": "Crassus"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 11,
+"fields": {
+"name": "Devaloka"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 12,
+"fields": {
+"name": "Delos"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 13,
+"fields": {
+"name": "El Dorado"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 14,
+"fields": {
+"name": "Gaea"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 15,
+"fields": {
+"name": "Isabella"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 16,
+"fields": {
+"name": "Kronos"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 17,
+"fields": {
+"name": "Lilith"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 18,
+"fields": {
+"name": "Maramma"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 19,
+"fields": {
+"name": "Nysa"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 20,
+"fields": {
+"name": "Nyx"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 21,
+"fields": {
+"name": "Orofena"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 22,
+"fields": {
+"name": "Seer"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 23,
+"fields": {
+"name": "Sutekh"
+}
+},
+{
+"model": "nocapapi.server",
+"pk": 24,
+"fields": {
+"name": "Valhalla"
+}
+}
 ]

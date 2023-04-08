@@ -2,21 +2,21 @@
     "model": "nocapapi.faction",
     "pk": 1,
     "fields": {
-        "name": "Green"
+        "name": "Marauder"
     }
 },
 {
     "model": "nocapapi.faction",
     "pk": 2,
     "fields": {
-        "name": "Purple"
+        "name": "Syndicate"
     }
 },
 {
     "model": "nocapapi.faction",
     "pk": 3,
     "fields": {
-        "name": "Yellow"
+        "name": "Covenant"
     }
 }
 ]
