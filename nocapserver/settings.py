@@ -64,15 +64,27 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
-CSRF_TRUSTED_ORIGINS = ['https://localhost:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'https://127.0.0.1:3000'
+CSRF_TRUSTED_ORIGINS = [ 'dead-game-client:10000',
+    '3.134.238.10',
+'3.129.111.220',
+'52.15.118.168',
+'deadgameroster.com',
+'www.deadgameroster.com',
+'https://dead-game-client.onrender.com',
                         ]
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = (
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'https://localhost:3000',
-    'https://127.0.0.1:3000'
+    'dead-game-client:10000',
+    '3.134.238.10',
+'3.129.111.220',
+'52.15.118.168',
+'deadgameroster.com',
+'www.deadgameroster.com',
+'https://dead-game-client.onrender.com',
+
+    
+    
 )
 # SESSION_COOKIE_SAMESITE = 'Strict'
 # CSRF_COOKIE_SAMESITE = 'Strict'
