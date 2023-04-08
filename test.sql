@@ -9,5 +9,5 @@ WHERE id NOT IN (
 SELECT * FROM nocapapi_rosterchoices
 WHERE character_id IN (53, 62, 36, 99); 
 
-DELETE FROM nocapapi_rosterchoices
-WHERE id=261
+DELETE FROM nocapapi_sharedcalculatedrosterchoicetoken
+WHERE id=14;
