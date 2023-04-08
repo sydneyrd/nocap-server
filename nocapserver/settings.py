@@ -64,28 +64,38 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
-CSRF_TRUSTED_ORIGINS = [ 'dead-game-client:10000',
-    '3.134.238.10',
-'3.129.111.220',
-'52.15.118.168',
-'deadgameroster.com',
-'www.deadgameroster.com',
-'https://dead-game-client.onrender.com',
-                        ]
+CSRF_TRUSTED_ORIGINS = [
+    'http://dead-game-client:10000',
+    'http://3.134.238.10',
+    'http://3.129.111.220',
+    'http://52.15.118.168',
+    'http://deadgameroster.com',
+    'http://www.deadgameroster.com',
+    'https://dead-game-client.onrender.com',
+    'https://dead-game-client:10000',
+    'https://3.134.238.10',
+    'https://3.129.111.220',
+    'https://52.15.118.168',
+    'https://deadgameroster.com',
+    'https://www.deadgameroster.com',
+]
 
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = (
-    'dead-game-client:10000',
-    '3.134.238.10',
-'3.129.111.220',
-'52.15.118.168',
-'deadgameroster.com',
-'www.deadgameroster.com',
-'https://dead-game-client.onrender.com',
+CORS_ALLOWED_ORIGINS = [
+    'http://dead-game-client:10000',
+    'http://3.134.238.10',
+    'http://3.129.111.220',
+    'http://52.15.118.168',
+    'http://deadgameroster.com',
+    'http://www.deadgameroster.com',
+    'https://dead-game-client.onrender.com',
+    'https://dead-game-client:10000',
+    'https://3.134.238.10',
+    'https://3.129.111.220',
+    'https://52.15.118.168',
+    'https://deadgameroster.com',
+    'https://www.deadgameroster.com',
+]
 
-    
-    
-)
 # SESSION_COOKIE_SAMESITE = 'Strict'
 # CSRF_COOKIE_SAMESITE = 'Strict'
 # SESSION_COOKIE_SECURE = False
