@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
-
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,9 @@ JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'dead-game-server.onrender.com',
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_CLASSES': [
@@ -64,16 +66,38 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
-CSRF_TRUSTED_ORIGINS = ['https://localhost:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'https://127.0.0.1:3000'
-                        ]
+CSRF_TRUSTED_ORIGINS = [
+    'http://dead-game-client:10000',
+    'http://3.134.238.10',
+    'http://3.129.111.220',
+    'http://52.15.118.168',
+    'http://deadgameroster.com',
+    'http://www.deadgameroster.com',
+    'https://dead-game-client.onrender.com',
+    'https://dead-game-client:10000',
+    'https://3.134.238.10',
+    'https://3.129.111.220',
+    'https://52.15.118.168',
+    'https://deadgameroster.com',
+    'https://www.deadgameroster.com',
+]
 
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = (
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'https://localhost:3000',
-    'https://127.0.0.1:3000'
-)
+CORS_ALLOWED_ORIGINS = [
+    'http://dead-game-client:10000',
+    'http://3.134.238.10',
+    'http://3.129.111.220',
+    'http://52.15.118.168',
+    'http://deadgameroster.com',
+    'http://www.deadgameroster.com',
+    'https://dead-game-client.onrender.com',
+    'https://dead-game-client:10000',
+    'https://3.134.238.10',
+    'https://3.129.111.220',
+    'https://52.15.118.168',
+    'https://deadgameroster.com',
+    'https://www.deadgameroster.com',
+]
+
 # SESSION_COOKIE_SAMESITE = 'Strict'
 # CSRF_COOKIE_SAMESITE = 'Strict'
 # SESSION_COOKIE_SECURE = False
@@ -116,10 +140,7 @@ WSGI_APPLICATION = 'nocapserver.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600)
 }
 
 
@@ -162,7 +183,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')

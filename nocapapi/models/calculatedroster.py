@@ -1,6 +1,6 @@
 from django.db import models
 from django.db.models import Sum, Aggregate
-from nocapapi.models import RosterUser, Roster
+from nocapapi.models import RosterUser, Roster, Server
 
 
 class CalculatedRoster(models.Model):
@@ -9,6 +9,7 @@ class CalculatedRoster(models.Model):
     roster = models.ForeignKey(Roster, on_delete=models.SET_NULL, null=True, related_name="calculated")
     is_public = models.BooleanField(default=False, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
+    server = models.ForeignKey(Server, on_delete=models.DO_NOTHING, null=True, blank=True)
     
     @property
     def total_damage(self):

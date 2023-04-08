@@ -1,93 +1,100 @@
 [
     {
-        "model": "nocapapi.Weapon",
-        "pk": 1,
-        "fields": {
-            "name": "Rapier"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 2,
-        "fields": {
-            "name": "Life Staff"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 3,
-        "fields": {
-            "name": "Greataxe"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 4,
-        "fields": {
-            "name": "Warhammer"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 5,
-        "fields": {
-            "name": "Spear"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 6,
-        "fields": {
-            "name": "Blunderbus"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 7,
-        "fields": {
-            "name": "Musket"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 8,
-        "fields": {
-            "name": "Hatchet"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 9,
-        "fields": {
-            "name": "Sword and Shield"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 10,
-        "fields": {
-            "name": "Firestaff"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 11,
-        "fields": {
-            "name": "Ice Gauntlet"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 12,
-        "fields": {
-            "name": "Void Gauntlet"
-        }
-    },
-    {
-        "model": "nocapapi.Weapon",
-        "pk": 13,
-        "fields": {
-            "name": "Bow"
-        }
+    "model": "nocapapi.weapon",
+    "pk": 1,
+    "fields": {
+    "name": "Blunderbuss"
     }
-]
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 2,
+    "fields": {
+    "name": "Bow"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 3,
+    "fields": {
+    "name": "Fire Staff"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 4,
+    "fields": {
+    "name": "Great Axe"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 5,
+    "fields": {
+    "name": "Greatsword"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 6,
+    "fields": {
+    "name": "Hatchet"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 7,
+    "fields": {
+    "name": "Ice Gauntlet"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 8,
+    "fields": {
+    "name": "Life Staff"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 9,
+    "fields": {
+    "name": "Musket"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 10,
+    "fields": {
+    "name": "Rapier"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 12,
+    "fields": {
+    "name": "Spear"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 13,
+    "fields": {
+    "name": "Sword"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 14,
+    "fields": {
+    "name": "Void Gauntlet"
+    }
+    },
+    {
+    "model": "nocapapi.weapon",
+    "pk": 15,
+    "fields": {
+    "name": "War Hammer"
+    }
+    }
+    ]
