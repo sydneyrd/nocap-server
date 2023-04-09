@@ -11,7 +11,7 @@ from .rosterchoices import RosterChoicesView
 from .rosteruser import RosterUserView
 from .user import UserView
 from .charlink import CharLinkView
-from .public_roster import public_calculated_rosters, public_calculated_roster_choices
+from .public_roster import public_calculated_rosters, public_calculated_roster_choices, public_calculated_character
 
 from .shared_character_token import generate_shared_character_token
 from .shared_character_create import  shared_character_create
