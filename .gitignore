@@ -59,6 +59,7 @@ cover/
 # Django stuff:
 *.log
 nocapserver/local_settings.py
+nocapserver/settings.py
 db.sqlite3
 db.sqlite3-journal
 
