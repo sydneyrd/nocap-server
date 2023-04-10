@@ -6,7 +6,6 @@ from nocapapi.serializers.user import RosterUserSerializer
 class CalculatedRosterSerializer(serializers.ModelSerializer):
     """JSON serializer for calculated rosters"""
     roster = RosterSerializer(many=False)
-    user = RosterUserSerializer(many=False)
     class Meta:
         model = CalculatedRoster
-        fields = ('id', 'user', 'rosterName', 'roster', 'total_damage', 'total_healing', 'total_deaths', 'total_kills', 'is_public', 'created_at', 'server' )
+        fields = ('id',  'rosterName', 'roster', 'total_damage', 'total_healing', 'total_deaths', 'total_kills', 'is_public', 'created_at', 'server' )
