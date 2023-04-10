@@ -27,7 +27,7 @@ JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'dead-game-server.onrender.com',
+    # 'dead-game-server.onrender.com',
 ]
 
 REST_FRAMEWORK = {
@@ -80,6 +80,10 @@ CSRF_TRUSTED_ORIGINS = [
     'https://52.15.118.168',
     'https://deadgameroster.com',
     'https://www.deadgameroster.com',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://localhost:3000',
+    'https://127.0.0.1:3000'
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -96,6 +100,10 @@ CORS_ALLOWED_ORIGINS = [
     'https://52.15.118.168',
     'https://deadgameroster.com',
     'https://www.deadgameroster.com',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://localhost:3000',
+    'https://127.0.0.1:3000'
 ]
 
 # SESSION_COOKIE_SAMESITE = 'Strict'
@@ -134,7 +142,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'nocapserver.wsgi.application'
-
+#local
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
