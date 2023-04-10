@@ -22,5 +22,4 @@ wrapt==1.14.1
 psycopg2-binary==2.9.5
 gunicorn==20.1.0
 dj_database_url==1.3.0
-whitenoise
-Brotli
+cloudinary
