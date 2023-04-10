@@ -33,6 +33,23 @@ ALLOWED_HOSTS = [
     'dead-game-server.onrender.com',
 ]
 
+
+#local settings 
+# ALLOWED_HOSTS = [
+#     '127.0.0.1' #local
+# ]
+# CSRF_TRUSTED_ORIGINS = ['https://localhost:3000', 'http://localhost:3000', 'http://127.0.0.1:3000', 'https://127.0.0.1:3000'
+#                         ]
+
+# CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOWED_ORIGINS = (
+#     'http://localhost:3000',
+#     'http://127.0.0.1:3000',
+#     'https://localhost:3000',
+#     'https://127.0.0.1:3000'
+# )
+
+
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.AnonRateThrottle',
@@ -87,10 +104,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://52.15.118.168',
     'https://deadgameroster.com',
     'https://www.deadgameroster.com',
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'https://localhost:3000',
-    'https://127.0.0.1:3000'
+    
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -107,10 +121,6 @@ CORS_ALLOWED_ORIGINS = [
     'https://52.15.118.168',
     'https://deadgameroster.com',
     'https://www.deadgameroster.com',
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'https://localhost:3000',
-    'https://127.0.0.1:3000'
 ]
 
 # SESSION_COOKIE_SAMESITE = 'Strict'
@@ -213,7 +223,7 @@ MEDIA_URL = '/media/'  # or any prefix you choose
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 # This setting tells Django at which URL static files are going to be served to the user.
 # Here, they well be accessible at your-domain.onrender.com/static/...
 STATIC_URL = '/static/'
