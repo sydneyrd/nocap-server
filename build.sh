@@ -3,8 +3,8 @@
 set -o errexit  # exit on error
 
 # Install Nginx
-yum apt-get update
-yum apt-get install -y nginx
+dnf apt-get update
+dnf apt-get install -y nginx
 
 # Install Python dependencies
 pip install -r requirements.txt
