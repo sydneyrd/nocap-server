@@ -23,6 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("MY_SECRET_KEY")
 JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
+CLOUDINARY_CLOUD_NAME=os.environ.get("CLOUDINARY_CLOUD_NAME")
+CLOUDINARY_API_KEY=os.environ.get("CLOUDINARY_API_KEY")
+CLOUDINARY_API_SECRET=os.environ.get("CLOUDINARY_API_SECRET")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -54,8 +57,11 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'nocapapi',
-    'whitenoise.runserver_nostatic',
+    'cloudinary_storage',
+    'cloudinary',
 ]
+
+
 
 
 # THIS IS NEW
@@ -203,8 +209,9 @@ USE_TZ = True
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
 
+MEDIA_URL = '/media/'  # or any prefix you choose
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
