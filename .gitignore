@@ -55,7 +55,7 @@ cover/
 # Translations
 *.mo
 *.pot
-
+media/
 # Django stuff:
 *.log
 nocapserver/local_settings.py
