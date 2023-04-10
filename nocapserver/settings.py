@@ -27,7 +27,7 @@ JWT_SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    # 'dead-game-server.onrender.com',
+    'dead-game-server.onrender.com',
 ]
 
 REST_FRAMEWORK = {
